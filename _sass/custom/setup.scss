@@ -1,0 +1,5 @@
+// Loaded before the theme sets its variable defaults, so values here
+// override just-the-docs defaults (e.g. $content-width: 800px) instead
+// of being ignored. Widens the readable column to cut down on the large
+// empty side margins that show up on laptop/desktop screens.
+$content-width: 1300px;
