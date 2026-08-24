@@ -1,5 +1,5 @@
-title: "Data Architecture: A Field Guide for Data Engineers"
-description: A practical, self-contained guide to modern data architecture for data engineers coming from legacy warehouses, SQL, and ETL tools like Talend.
+title: "Data Architecture: A Field Guide for Data Professionals"
+description: A practical, self-contained guide to modern data architecture for data professionals coming from legacy warehouses, SQL, and ETL tools like Talend.
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme

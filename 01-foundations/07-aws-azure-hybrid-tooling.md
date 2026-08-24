@@ -1,21 +1,21 @@
 ---
-title: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers
+title: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals
 parent: "Foundations: Bridging from Legacy DW & ETL"
 nav_order: 7
 ---
 
-# AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers
+# AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals
 {: .no_toc }
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
 An architect who only knows one cloud vendor's service names will still design the *shape* of a system correctly but will burn weeks re-learning the *implementation* every time a client, employer, or acquisition runs on the other one — and will completely misjudge the cost and complexity of a genuinely hybrid estate, which is now the default rather than the exception. [Batch, Near-Real-Time & Real-Time Processing](06-batch-realtime-and-robust-pipelines/) established the latency tiers a pipeline can run at; this topic is about *where* that pipeline actually runs — the concrete AWS and Azure services that implement ingestion, storage, transformation, and serving, and what changes when they have to work together across a cloud boundary instead of inside just one.
 
-## AWS for data engineers
+## AWS for data professionals
 
 AWS's data services map cleanly onto the layers this course keeps returning to. **Amazon S3** is the default **object storage** layer underneath most AWS data lakes — cheap, durable, and the landing zone every other service reads from and writes to. **AWS Glue** is the managed **ETL**/**ELT** and cataloging layer: it crawls S3 to infer schema into the Glue Data Catalog and runs Spark-based transformation jobs without you managing a cluster. **Amazon Redshift** is AWS's cloud data warehouse, the OLAP engine for structured, high-concurrency BI workloads. **Amazon Kinesis** is the streaming ingestion service — the AWS equivalent of a managed Kafka for **RT**/**NRT** event pipelines. **Amazon EMR** is managed Hadoop/Spark for large-scale batch and ML workloads that need more control than Glue's serverless model offers. **AWS Lambda** rounds this out as the serverless compute layer for lightweight, event-triggered transformation — a file lands in S3, a Lambda function fires. Together these give an architect a full **medallion**-capable stack without provisioning a single server.
 
-## Azure for data engineers
+## Azure for data professionals
 
 Azure's naming is different but the layers underneath are the same ones an architect already recognizes. **Azure Data Lake Storage (ADLS Gen2)** is Azure's object storage foundation, built on Blob Storage with a hierarchical namespace that makes directory-style operations cheaper than flat blob storage alone. **Azure Synapse Analytics** unifies data warehousing and big-data analytics in one workspace — it's simultaneously Azure's answer to Redshift and, through its Spark pools, to parts of what EMR does on AWS. **Azure Data Factory (ADF)** is the orchestration and **ELT** pipeline-authoring tool — the closest analog a Talend or Informatica veteran will find to their old drag-and-drop pipeline canvas, now pointed at cloud sources and sinks instead of on-prem ones. **Azure Databricks** is a first-party, deeply integrated Spark platform for large-scale transformation and machine learning, effectively Azure's version of EMR but with a stronger notebook-first workflow. **Azure Stream Analytics** handles streaming ingestion and windowed aggregation, Azure's answer to Kinesis.
 

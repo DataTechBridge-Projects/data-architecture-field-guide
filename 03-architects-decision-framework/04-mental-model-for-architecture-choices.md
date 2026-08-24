@@ -42,7 +42,7 @@ No single dimension decides a choice on its own — a cheap, low-control option 
 
 ## Applying the model: cloud providers
 
-The **AWS** and **Azure** service maps from [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers](../01-foundations/07-aws-azure-hybrid-tooling/) map onto the same six dimensions differently depending on what your team and your existing estate already look like:
+The **AWS** and **Azure** service maps from [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](../01-foundations/07-aws-azure-hybrid-tooling/) map onto the same six dimensions differently depending on what your team and your existing estate already look like:
 
 | Dimension | AWS | Azure |
 |---|---|---|

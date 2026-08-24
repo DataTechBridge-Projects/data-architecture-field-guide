@@ -4,10 +4,10 @@ layout: home
 nav_order: 1
 ---
 
-# Data Architecture: A Field Guide for Data Engineers
+# Data Architecture: A Field Guide for Data Professionals
 {: .fs-9 }
 
-A practical, self-contained guide to modern data architecture for data engineers coming from
+A practical, self-contained guide to modern data architecture for data professionals coming from
 legacy warehouses, SQL, and ETL tools like Talend.
 {: .fs-6 .fw-300 }
 

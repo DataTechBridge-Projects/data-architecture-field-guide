@@ -64,7 +64,7 @@ A migration succeeds or fails less on which pattern was chosen than on whether t
 
 ---
 
-| [&larr; Previous: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers](07-aws-azure-hybrid-tooling/) | [Next: Choosing an Architecture & the Road to Becoming a Data Architect &rarr;](09-choosing-architecture-and-career-path/) |
+| [&larr; Previous: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](07-aws-azure-hybrid-tooling/) | [Next: Choosing an Architecture & the Road to Becoming a Data Architect &rarr;](09-choosing-architecture-and-career-path/) |
 |:---|---:|
 
 <!-- prevnext:end -->

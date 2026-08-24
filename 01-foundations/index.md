@@ -40,7 +40,7 @@ mindmap
 | 4 | [Data Modeling, Database Types & Normalization Refresher](04-data-modeling-refresher/) |
 | 5 | [From Legacy ETL to Modern ELT: Bridging Talend & Informatica-Style Tools](05-legacy-etl-to-modern-elt/) |
 | 6 | [Batch, Near-Real-Time & Real-Time Processing: Building Robust Pipelines](06-batch-realtime-and-robust-pipelines/) |
-| 7 | [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers](07-aws-azure-hybrid-tooling/) |
+| 7 | [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](07-aws-azure-hybrid-tooling/) |
 | 8 | [Migrating a Legacy Warehouse to the Cloud: Patterns & Pitfalls](08-migrating-legacy-warehouse-to-cloud/) |
 | 9 | [Choosing an Architecture & the Road to Becoming a Data Architect](09-choosing-architecture-and-career-path/) |
 

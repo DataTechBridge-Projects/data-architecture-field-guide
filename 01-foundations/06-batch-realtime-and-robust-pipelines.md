@@ -78,7 +78,7 @@ Getting this choice right — and building whichever tier you land on with the f
 
 ---
 
-| [&larr; Previous: From Legacy ETL to Modern ELT: Bridging Talend & Informatica-Style Tools](05-legacy-etl-to-modern-elt/) | [Next: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers &rarr;](07-aws-azure-hybrid-tooling/) |
+| [&larr; Previous: From Legacy ETL to Modern ELT: Bridging Talend & Informatica-Style Tools](05-legacy-etl-to-modern-elt/) | [Next: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals &rarr;](07-aws-azure-hybrid-tooling/) |
 |:---|---:|
 
 <!-- prevnext:end -->

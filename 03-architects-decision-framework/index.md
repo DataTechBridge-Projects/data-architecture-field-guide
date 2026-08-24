@@ -23,7 +23,7 @@ mindmap
       Cost, control, complexity, lock-in, skill, reversibility
 ```
 
-This group leans hard on what Architecture Patterns Deep Dive already established and hands several of its own ideas forward to later groups. See also: [The Evolution of Data Architecture](02-evolution-of-data-architecture/) revisits every pattern from [Architecture Patterns Deep Dive](../02-architecture-patterns-deep-dive/) by name; [A Mental Model for Architecture Choices](04-mental-model-for-architecture-choices/) applies its six-dimension framework to the AWS/Azure/hybrid tooling covered in [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Engineers](../01-foundations/07-aws-azure-hybrid-tooling/) and to the table-format decision covered in depth in [Table Formats: Delta vs Iceberg vs Hudi](../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/).
+This group leans hard on what Architecture Patterns Deep Dive already established and hands several of its own ideas forward to later groups. See also: [The Evolution of Data Architecture](02-evolution-of-data-architecture/) revisits every pattern from [Architecture Patterns Deep Dive](../02-architecture-patterns-deep-dive/) by name; [A Mental Model for Architecture Choices](04-mental-model-for-architecture-choices/) applies its six-dimension framework to the AWS/Azure/hybrid tooling covered in [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](../01-foundations/07-aws-azure-hybrid-tooling/) and to the table-format decision covered in depth in [Table Formats: Delta vs Iceberg vs Hudi](../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/).
 
 ## Topics
 
