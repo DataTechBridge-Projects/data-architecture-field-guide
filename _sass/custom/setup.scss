@@ -1,5 +1,9 @@
 // Loaded before the theme sets its variable defaults, so values here
-// override just-the-docs defaults (e.g. $content-width: 800px) instead
+// override just-the-docs defaults (e.g. $content-width: 50rem) instead
 // of being ignored. Widens the readable column to cut down on the large
 // empty side margins that show up on laptop/desktop screens.
-$content-width: 1300px;
+//
+// Must stay in rem, not px: layout.scss does raw Sass arithmetic like
+// `$nav-width + $content-width` (both theme defaults are rem), and the
+// bundled Sass 3.7.4 errors on mixed px/rem arithmetic.
+$content-width: 80rem; // ~1280px
