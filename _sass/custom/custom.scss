@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;500;600&display=swap');
+
+// Detailed site navigation renders in a distinct font from body content,
+// so the nav reads as a study/reference index rather than prose.
+$nav-font-family: "IBM Plex Sans Condensed", "Segoe UI", Arial, sans-serif;
+
+.site-title,
+.side-bar,
+.nav-list,
+.nav-list-item,
+.nav-list .nav-list-link,
+.site-nav {
+  font-family: $nav-font-family;
+}
+
+.nav-list-item .nav-list-expander {
+  font-family: $nav-font-family;
+}

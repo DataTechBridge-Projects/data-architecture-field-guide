@@ -1,0 +1,55 @@
+# Whitelist approach: ignore everything by default, then explicitly
+# un-ignore only what GitHub Pages (Jekyll) needs to build this site.
+# Local working files (plan.md, PROGRESS.md, CONTENT_STYLE.md, TABLE_OF_CONTENTS.md,
+# data/, raw_content_outline/, templates/, CLAUDE.md, .claude/) stay untracked.
+
+*
+
+# Allow directory traversal so negations below can reach nested files
+!*/
+
+# Root files needed to build the site
+!/.gitignore
+!/_config.yml
+!/Gemfile
+
+# Site content
+!/index.md
+!/_sass/
+!/_sass/**
+
+# Course content directories
+!/01-foundations/
+!/01-foundations/**
+!/02-architecture-patterns-deep-dive/
+!/02-architecture-patterns-deep-dive/**
+!/03-architects-decision-framework/
+!/03-architects-decision-framework/**
+!/04-storage-and-table-formats/
+!/04-storage-and-table-formats/**
+!/05-dimensional-modeling-cloud-era/
+!/05-dimensional-modeling-cloud-era/**
+!/06-ingestion-and-streaming-decisions/
+!/06-ingestion-and-streaming-decisions/**
+!/07-transformation-and-modern-data-stack/
+!/07-transformation-and-modern-data-stack/**
+!/08-dataops-orchestration-and-metadata/
+!/08-dataops-orchestration-and-metadata/**
+!/09-quality-security-and-governance/
+!/09-quality-security-and-governance/**
+!/10-cost-and-performance-architecture/
+!/10-cost-and-performance-architecture/**
+!/11-serving-reliability-and-mesh-operating-model/
+!/11-serving-reliability-and-mesh-operating-model/**
+!/12-architecting-for-ai-and-closing-the-loop/
+!/12-architecting-for-ai-and-closing-the-loop/**
+!/13-hands-on-tutorials/
+!/13-hands-on-tutorials/**
+
+# Jekyll / Ruby build artifacts (never needed in the repo)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/

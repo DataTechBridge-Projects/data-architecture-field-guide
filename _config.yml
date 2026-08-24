@@ -1,0 +1,42 @@
+title: "Data Architecture: A Field Guide for Data Engineers"
+description: A practical, self-contained guide to modern data architecture for data engineers coming from legacy warehouses, SQL, and ETL tools like Talend.
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+permalink: pretty
+
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+
+nav_sort: case_insensitive
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+footer_content: "Independent, self-authored data architecture field notes."
+
+callouts:
+  key-term:
+    title: Key Term
+    color: green
+  important:
+    title: Important
+    color: red
+
+mermaid:
+  version: "10.9.1"
+
+exclude:
+  - raw_content_outline/
+  - templates/
+  - NEW_COURSE_PROMPT.md
+  - plan.md
+  - PROGRESS.md
+  - CONTENT_STYLE.md
+  - TABLE_OF_CONTENTS.md
+  - data/
+  - vendor/
+  - node_modules/
