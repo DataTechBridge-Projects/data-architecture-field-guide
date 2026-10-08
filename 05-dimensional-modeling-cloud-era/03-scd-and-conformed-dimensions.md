@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 3: Designing the Data Layer &middot; Dimensional Modeling for the Cloud Era*
 
-[Facts, Dimensions & Grain](02-facts-dimensions-grain/) treated `dim_customer` as if it were static — but a customer's segment, region, or address changes constantly in the source system, and an architect has to decide, table by table, whether the warehouse overwrites that change, preserves it, or splits the difference. Get this wrong and you get one of two failure modes stakeholders will actually notice: a historical report that silently re-tells the past using today's customer segment (because you overwrote when you should have preserved history), or a dimension table that's ballooned into millions of near-duplicate rows because every business process invented its own version of "customer" (because nobody conformed it).
+[Facts, Dimensions & Grain](../02-facts-dimensions-grain/) treated `dim_customer` as if it were static — but a customer's segment, region, or address changes constantly in the source system, and an architect has to decide, table by table, whether the warehouse overwrites that change, preserves it, or splits the difference. Get this wrong and you get one of two failure modes stakeholders will actually notice: a historical report that silently re-tells the past using today's customer segment (because you overwrote when you should have preserved history), or a dimension table that's ballooned into millions of near-duplicate rows because every business process invented its own version of "customer" (because nobody conformed it).
 
 ## SCD types are decisions, not a taxonomy to memorize
 
@@ -78,7 +78,7 @@ Build the matrix before building marts, and every team inherits the same `dim_cu
 
 ---
 
-| [&larr; Previous: Facts, Dimensions & Grain: The Foundation of Dimensional Modeling](02-facts-dimensions-grain/) | [Next: Beyond Star Schemas: One Big Table & Wide Tables &rarr;](04-beyond-star-schemas/) |
+| [&larr; Previous: Facts, Dimensions & Grain: The Foundation of Dimensional Modeling](../02-facts-dimensions-grain/) | [Next: Beyond Star Schemas: One Big Table & Wide Tables &rarr;](../04-beyond-star-schemas/) |
 |:---|---:|
 
 <!-- prevnext:end -->

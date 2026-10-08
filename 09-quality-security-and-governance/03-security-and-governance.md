@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 5: Running It Like a Platform &middot; Quality, Security & Governance*
 
-A golden record is only half of trustworthy governance — the other half is making sure the right people, and only the right people, can see it, and that "the right people" is a rule the platform enforces rather than a spreadsheet of who asked nicely. [Master Data Management](02-master-data-management/) established one authoritative version of a sensitive entity like a customer; this topic is about controlling who gets to see which fields of it, under which regulatory obligation, and proving that control holds up when an auditor asks.
+A golden record is only half of trustworthy governance — the other half is making sure the right people, and only the right people, can see it, and that "the right people" is a rule the platform enforces rather than a spreadsheet of who asked nicely. [Master Data Management](../02-master-data-management/) established one authoritative version of a sensitive entity like a customer; this topic is about controlling who gets to see which fields of it, under which regulatory obligation, and proving that control holds up when an auditor asks.
 
 ## The access architecture: RBAC vs ABAC vs RLS
 
@@ -69,7 +69,7 @@ Every access control adds friction: a data scientist waits days for a grant, a d
 
 ## Tools: catalogs, policy engines, and native platform controls
 
-Governance tooling splits into three layers, and most architectures end up running at least one tool from each rather than a single do-everything product. The **catalog and classification layer** is where PII gets tagged and lineage gets surfaced to humans: **Collibra** and **Alation** are the long-standing enterprise players, strong on business glossaries and stewardship workflows; **Atlan** is the newer, engineer-friendlier entrant built around the same active-metadata idea as the catalogs covered in [Metadata, Lineage & the Data Catalog](../08-dataops-orchestration-and-metadata/02-metadata-lineage-and-catalog/); and the cloud providers each ship their own — **Microsoft Purview** across Azure, **Google Cloud Dataplex**, **AWS Glue Data Catalog** paired with **Lake Formation**.
+Governance tooling splits into three layers, and most architectures end up running at least one tool from each rather than a single do-everything product. The **catalog and classification layer** is where PII gets tagged and lineage gets surfaced to humans: **Collibra** and **Alation** are the long-standing enterprise players, strong on business glossaries and stewardship workflows; **Atlan** is the newer, engineer-friendlier entrant built around the same active-metadata idea as the catalogs covered in [Metadata, Lineage & the Data Catalog](../../08-dataops-orchestration-and-metadata/02-metadata-lineage-and-catalog/); and the cloud providers each ship their own — **Microsoft Purview** across Azure, **Google Cloud Dataplex**, **AWS Glue Data Catalog** paired with **Lake Formation**.
 
 The **policy-engine layer** is where ABAC and masking rules actually get evaluated at query time. **Open Policy Agent (OPA)** is the open-source, cloud-agnostic choice referenced in the policy-as-code example above; **Immuta** and **Privacera** are commercial platforms purpose-built for data (dynamic masking, attribute-based policies that span multiple warehouses and lakes from one control plane); **Apache Ranger** fills the same role natively in Hadoop-ecosystem and some lakehouse deployments. Increasingly, the third layer — **native platform controls** — covers a lot of this without a separate product at all: **Snowflake**'s row access policies and dynamic data masking, **Databricks Unity Catalog**'s attribute-based access control, and BigQuery's column-level security and policy tags all implement RBAC, ABAC, or RLS directly inside the engine the data already lives in.
 
@@ -79,7 +79,7 @@ The practical decision is less "which vendor" than "how many engines do you actu
 
 ---
 
-| [&larr; Previous: Master Data Management: Golden Records, Matching & Stewardship](02-master-data-management/) | [Next: Data Strategy & Roadmaps: Maturity Assessment, Gap Analysis & Business Alignment &rarr;](04-data-strategy-and-roadmaps/) |
+| [&larr; Previous: Master Data Management: Golden Records, Matching & Stewardship](../02-master-data-management/) | [Next: Data Strategy & Roadmaps: Maturity Assessment, Gap Analysis & Business Alignment &rarr;](../04-data-strategy-and-roadmaps/) |
 |:---|---:|
 
 <!-- prevnext:end -->

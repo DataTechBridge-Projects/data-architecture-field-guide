@@ -9,7 +9,7 @@ nav_order: 8
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-Most architects don't get to design a greenfield platform — they inherit a fifteen-year-old on-prem warehouse that the business depends on every day, and the single highest-risk project of their career is often moving it to the cloud without breaking the finance close or the executive dashboard along the way. [AWS, Azure & Hybrid/Multi-Cloud Tooling](07-aws-azure-hybrid-tooling/) covered the destination services; this topic covers the *journey* to them — the migration patterns that separate a controlled cutover from a multi-week outage, and the pitfalls that turn "we're migrating the warehouse" into the project every stakeholder remembers for the wrong reasons.
+Most architects don't get to design a greenfield platform — they inherit a fifteen-year-old on-prem warehouse that the business depends on every day, and the single highest-risk project of their career is often moving it to the cloud without breaking the finance close or the executive dashboard along the way. [AWS, Azure & Hybrid/Multi-Cloud Tooling](../07-aws-azure-hybrid-tooling/) covered the destination services; this topic covers the *journey* to them — the migration patterns that separate a controlled cutover from a multi-week outage, and the pitfalls that turn "we're migrating the warehouse" into the project every stakeholder remembers for the wrong reasons.
 
 ## Three patterns, three risk profiles
 
@@ -56,7 +56,7 @@ The technical pattern is rarely what turns a migration into an incident — thes
 - **SQL dialect and semantic drift**: a stored procedure or a `NULL`-handling rule that behaves subtly differently on the new engine, producing numbers that are wrong instead of missing — the dangerous kind of bug, because dashboards don't flag a plausible-looking wrong number the way they flag a blank one.
 - **Treating the cutover as a purely technical event**: no communication plan for the report authors, analysts, and downstream teams whose queries, credentials, and connection strings all have to change — a technically flawless migration still fails if nobody told the BI team the connection string moved.
 - **No rollback plan**: proceeding past the point where the legacy system can be reverted to, because "we're basically done" felt true before dual-run finished proving it.
-- **Skipping the requirements conversation entirely**: migrating a warehouse "as-is" without asking whether the current design still fits current needs — the fastest way to spend months moving technical debt from on-prem to cloud instead of resolving it, and precisely the kind of one-way-door decision that deserves the [deciding-under-uncertainty](../03-architects-decision-framework/01-deciding-under-uncertainty/) framing this course builds toward: reading the real requirements and constraints before committing to a pattern that's expensive to reverse once storage is decommissioned and consumers have moved on.
+- **Skipping the requirements conversation entirely**: migrating a warehouse "as-is" without asking whether the current design still fits current needs — the fastest way to spend months moving technical debt from on-prem to cloud instead of resolving it, and precisely the kind of one-way-door decision that deserves the [deciding-under-uncertainty](../../03-architects-decision-framework/01-deciding-under-uncertainty/) framing this course builds toward: reading the real requirements and constraints before committing to a pattern that's expensive to reverse once storage is decommissioned and consumers have moved on.
 
 A migration succeeds or fails less on which pattern was chosen than on whether the cutover was staged, validated, and reversible — the same discipline, in miniature, that the rest of this course applies to designing a platform from scratch.
 
@@ -64,7 +64,7 @@ A migration succeeds or fails less on which pattern was chosen than on whether t
 
 ---
 
-| [&larr; Previous: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](07-aws-azure-hybrid-tooling/) | [Next: Choosing an Architecture & the Road to Becoming a Data Architect &rarr;](09-choosing-architecture-and-career-path/) |
+| [&larr; Previous: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](../07-aws-azure-hybrid-tooling/) | [Next: Choosing an Architecture & the Road to Becoming a Data Architect &rarr;](../09-choosing-architecture-and-career-path/) |
 |:---|---:|
 
 <!-- prevnext:end -->

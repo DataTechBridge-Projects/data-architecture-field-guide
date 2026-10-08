@@ -15,7 +15,7 @@ nav_order: 5
 
 This tutorial sets up **dbt** against **Redshift**, modeling transformations as version-controlled SQL with tests, documentation, and a DAG of dependent models instead of a tangle of stored procedures.
 
-It's the practical walkthrough behind [The dbt Paradigm: Transformation as Code, Data Contracts & Idempotent Reprocessing](../07-transformation-and-modern-data-stack/02-dbt-paradigm-contracts-idempotency/) — the same warehouse a legacy ETL job used to load nightly now gets its transform logic reviewed, tested, and re-run idempotently like application code.
+It's the practical walkthrough behind [The dbt Paradigm: Transformation as Code, Data Contracts & Idempotent Reprocessing](../../07-transformation-and-modern-data-stack/02-dbt-paradigm-contracts-idempotency/) — the same warehouse a legacy ETL job used to load nightly now gets its transform logic reviewed, tested, and re-run idempotently like application code.
 
 ```mermaid
 flowchart LR
@@ -32,7 +32,7 @@ flowchart LR
 
 ---
 
-| [&larr; Previous: Build Your Apache Hudi Data Lake on Amazon EMR](04-lakehouse-hudi-emr/) | [Next: Near-Real-Time Analytics with Redshift Streaming Ingestion & Kinesis &rarr;](06-streaming-analytics-kinesis/) |
+| [&larr; Previous: Build Your Apache Hudi Data Lake on Amazon EMR](../04-lakehouse-hudi-emr/) | [Next: Near-Real-Time Analytics with Redshift Streaming Ingestion & Kinesis &rarr;](../06-streaming-analytics-kinesis/) |
 |:---|---:|
 
 <!-- prevnext:end -->

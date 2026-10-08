@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 4: Moving & Shaping Data &middot; Transformation & the Modern Data Stack*
 
-A dbt project without contracts or a reprocessing discipline turns "just rerun the failed job" into a coin flip — sometimes it repairs the table, sometimes it silently doubles every row that already loaded successfully. This is the paradigm that lets an architect actually trust reprocessing enough to design recovery procedures around it, instead of treating every failed run as an incident that needs a human to manually diff tables before anyone touches "rerun." The [previous topic](01-etl-vs-elt-and-medallion-in-practice/) settled *where* transformation logic runs (ELT, pushed into the warehouse's own compute) and *how* it's organized (bronze, silver, gold); this topic is about how those bronze-to-silver-to-gold transforms actually get written, enforced, and safely rerun without corrupting what's already landed.
+A dbt project without contracts or a reprocessing discipline turns "just rerun the failed job" into a coin flip — sometimes it repairs the table, sometimes it silently doubles every row that already loaded successfully. This is the paradigm that lets an architect actually trust reprocessing enough to design recovery procedures around it, instead of treating every failed run as an incident that needs a human to manually diff tables before anyone touches "rerun." The [previous topic](../01-etl-vs-elt-and-medallion-in-practice/) settled *where* transformation logic runs (ELT, pushed into the warehouse's own compute) and *how* it's organized (bronze, silver, gold); this topic is about how those bronze-to-silver-to-gold transforms actually get written, enforced, and safely rerun without corrupting what's already landed.
 
 ## The dbt paradigm: transformation as code
 
@@ -88,7 +88,7 @@ Put the three pieces together and you have the actual operating discipline behin
 
 ---
 
-| [&larr; Previous: ETL vs ELT & the Medallion Pattern in Practice](01-etl-vs-elt-and-medallion-in-practice/) | [Next: DataOps, Orchestration & Metadata &rarr;](../08-dataops-orchestration-and-metadata/) |
+| [&larr; Previous: ETL vs ELT & the Medallion Pattern in Practice](../01-etl-vs-elt-and-medallion-in-practice/) | [Next: DataOps, Orchestration & Metadata &rarr;](../../08-dataops-orchestration-and-metadata/) |
 |:---|---:|
 
 <!-- prevnext:end -->

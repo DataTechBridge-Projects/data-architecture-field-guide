@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 5: Running It Like a Platform &middot; DataOps, Orchestration & Metadata*
 
-A transformation layer that only runs correctly on one engineer's laptop isn't an architecture, it's a liability with a due date — the moment two people touch the same project, or a change meant for staging lands straight in the warehouse everyone else depends on, the absence of **DataOps** stops being an inconvenience and starts being an incident. [Transformation & the Modern Data Stack](../07-transformation-and-modern-data-stack/) closed out Part 4 by turning transformation logic into version-controlled, testable code; this topic opens Part 5, "Running It Like a Platform," with the question that code alone never answers: how does a change get from a developer's branch into production safely, repeatedly, and without anyone babysitting the deploy?
+A transformation layer that only runs correctly on one engineer's laptop isn't an architecture, it's a liability with a due date — the moment two people touch the same project, or a change meant for staging lands straight in the warehouse everyone else depends on, the absence of **DataOps** stops being an inconvenience and starts being an incident. [Transformation & the Modern Data Stack](../../07-transformation-and-modern-data-stack/) closed out Part 4 by turning transformation logic into version-controlled, testable code; this topic opens Part 5, "Running It Like a Platform," with the question that code alone never answers: how does a change get from a developer's branch into production safely, repeatedly, and without anyone babysitting the deploy?
 
 ## Why DataOps: The Discipline That Separates Architects From Pipeline-Builders
 
@@ -93,7 +93,7 @@ The trade-off is operational complexity: a scheduled DAG fails in one obvious wa
 
 ---
 
-| [&larr; Previous: DataOps, Orchestration & Metadata](./) | [Next: Metadata, Lineage & the Data Catalog &rarr;](02-metadata-lineage-and-catalog/) |
+| [&larr; Previous: DataOps, Orchestration & Metadata](../) | [Next: Metadata, Lineage & the Data Catalog &rarr;](../02-metadata-lineage-and-catalog/) |
 |:---|---:|
 
 <!-- prevnext:end -->

@@ -9,7 +9,7 @@ nav_order: 4
 
 *Part 3: Designing the Data Layer &middot; Dimensional Modeling for the Cloud Era*
 
-An architect who only knows how to build star schemas will over-engineer half the marts they're asked for — plenty of cloud-era BI and reporting workloads are better served by skipping the joins entirely, and knowing when is the difference between a dashboard that returns in two seconds and one that returns in twenty. [Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise](03-scd-and-conformed-dimensions/) assumed you were keeping the star intact and just managing change within it; this topic asks a more basic question — whether a star is even the right target once storage is nearly free and every dimension join has to be paid for in compute at query time.
+An architect who only knows how to build star schemas will over-engineer half the marts they're asked for — plenty of cloud-era BI and reporting workloads are better served by skipping the joins entirely, and knowing when is the difference between a dashboard that returns in two seconds and one that returns in twenty. [Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise](../03-scd-and-conformed-dimensions/) assumed you were keeping the star intact and just managing change within it; this topic asks a more basic question — whether a star is even the right target once storage is nearly free and every dimension join has to be paid for in compute at query time.
 
 ## One Big Table: the cloud-warehouse default for a reason
 
@@ -43,7 +43,7 @@ Picking a paradigm per workload, rather than a single model for the whole wareho
 
 ---
 
-| [&larr; Previous: Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise](03-scd-and-conformed-dimensions/) | [Next: Ingestion & Streaming Decisions &rarr;](../06-ingestion-and-streaming-decisions/) |
+| [&larr; Previous: Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise](../03-scd-and-conformed-dimensions/) | [Next: Ingestion & Streaming Decisions &rarr;](../../06-ingestion-and-streaming-decisions/) |
 |:---|---:|
 
 <!-- prevnext:end -->

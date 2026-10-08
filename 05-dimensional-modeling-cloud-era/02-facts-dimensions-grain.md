@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 3: Designing the Data Layer &middot; Dimensional Modeling for the Cloud Era*
 
-Whichever of the three schools from [Warehouse Design Philosophies: Inmon vs Kimball vs Data Vault](01-inmon-vs-kimball-vs-data-vault/) your organization leans toward, the layer stakeholders actually query is almost always dimensional in shape — even a Data Vault deploys a Kimball-style mart on top of its hubs and satellites. That makes the vocabulary below load-bearing, not background: declare the wrong **grain** before you write a single `CREATE TABLE`, and every `JOIN`, every `SUM()`, and every stakeholder's trust in the resulting number breaks — usually silently, months later, when someone double-counts a metric or can't reproduce a report.
+Whichever of the three schools from [Warehouse Design Philosophies: Inmon vs Kimball vs Data Vault](../01-inmon-vs-kimball-vs-data-vault/) your organization leans toward, the layer stakeholders actually query is almost always dimensional in shape — even a Data Vault deploys a Kimball-style mart on top of its hubs and satellites. That makes the vocabulary below load-bearing, not background: declare the wrong **grain** before you write a single `CREATE TABLE`, and every `JOIN`, every `SUM()`, and every stakeholder's trust in the resulting number breaks — usually silently, months later, when someone double-counts a metric or can't reproduce a report.
 
 ## Facts and dimensions, refreshed
 
@@ -44,7 +44,7 @@ This reads like the same ANSI DDL you'd write in T-SQL or PL/SQL against a legac
 
 Every example so far has assumed a **transaction fact** — one row per discrete business event, grain declared once and stable for the life of the table, the shape you already build automatically from an OLTP order feed or a clickstream. Two other canonical fact shapes exist because not every business process actually generates a discrete event worth capturing.
 
-A **periodic snapshot fact** declares its grain around a fixed time interval instead of an event: "one row per SKU per store, per day, capturing quantity on hand at close of business." Nothing "happened" at that instant — the pipeline is observing state, not recording a transaction — but the grain discipline applies just as strictly: every measure and dimension key on that row must be true at end-of-day for that SKU and store, or the table silently blends two different observation points into one. This is the shape behind the "Inventory Snapshots" row in the bus matrix that [Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise](03-scd-and-conformed-dimensions/) introduces next.
+A **periodic snapshot fact** declares its grain around a fixed time interval instead of an event: "one row per SKU per store, per day, capturing quantity on hand at close of business." Nothing "happened" at that instant — the pipeline is observing state, not recording a transaction — but the grain discipline applies just as strictly: every measure and dimension key on that row must be true at end-of-day for that SKU and store, or the table silently blends two different observation points into one. This is the shape behind the "Inventory Snapshots" row in the bus matrix that [Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise](../03-scd-and-conformed-dimensions/) introduces next.
 
 An **accumulating snapshot fact** covers a multi-step process with a defined start and end — an order moving through placed, shipped, and delivered — as a single row updated in place as each milestone lands, carrying one date foreign key per milestone (`order_date_key`, `ship_date_key`, `delivery_date_key`) rather than the single date key a transaction fact needs.
 
@@ -100,7 +100,7 @@ That diagram is a star, not a snowflake — `dim_product` carries `category` and
 
 ---
 
-| [&larr; Previous: Warehouse Design Philosophies: Inmon vs Kimball vs Data Vault](01-inmon-vs-kimball-vs-data-vault/) | [Next: Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise &rarr;](03-scd-and-conformed-dimensions/) |
+| [&larr; Previous: Warehouse Design Philosophies: Inmon vs Kimball vs Data Vault](../01-inmon-vs-kimball-vs-data-vault/) | [Next: Slowly Changing Dimensions & Conformed Dimensions Across the Enterprise &rarr;](../03-scd-and-conformed-dimensions/) |
 |:---|---:|
 
 <!-- prevnext:end -->

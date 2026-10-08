@@ -9,7 +9,7 @@ nav_order: 4
 
 *Part 2: The Architecture Landscape &middot; The Architect's Decision Framework*
 
-The six-box reference architecture from [The Reference Architecture](03-reference-architecture/) tells you what decisions exist at each layer; it doesn't tell you how to actually make one when every option in front of you looks reasonable on a slide. This closing topic supplies that missing piece: one reusable mental model — six dimensions you can run any architecture choice through — applied to four decisions an architect faces again and again: which table format, which cloud provider, whether to go hybrid, and whether to build, buy, or compose. Everything after this topic in the course is, in one way or another, an instance of running a specific decision through this same model.
+The six-box reference architecture from [The Reference Architecture](../03-reference-architecture/) tells you what decisions exist at each layer; it doesn't tell you how to actually make one when every option in front of you looks reasonable on a slide. This closing topic supplies that missing piece: one reusable mental model — six dimensions you can run any architecture choice through — applied to four decisions an architect faces again and again: which table format, which cloud provider, whether to go hybrid, and whether to build, buy, or compose. Everything after this topic in the course is, in one way or another, an instance of running a specific decision through this same model.
 
 ## The six dimensions
 
@@ -20,7 +20,7 @@ Any architecture choice worth deliberating over can be scored against the same s
 - **Complexity**: how many new moving parts, failure modes, and areas of required expertise this choice adds on top of what the team already operates.
 - **Lock-in**: how expensive it is to leave once you're committed — proprietary APIs and formats, egress fees, staff who've specialized in one vendor's tooling, and the sheer volume of data that would need migrating.
 - **Team skill**: what the team already knows how to operate at 2 a.m. versus what it would need to learn from scratch, and how long that learning curve realistically takes.
-- **Reversibility**: essentially the two-way-door/one-way-door test from [Deciding Under Uncertainty](01-deciding-under-uncertainty/), applied specifically to this choice — can you walk it back at a bounded cost, or is this decision going to outlive the person who made it?
+- **Reversibility**: essentially the two-way-door/one-way-door test from [Deciding Under Uncertainty](../01-deciding-under-uncertainty/), applied specifically to this choice — can you walk it back at a bounded cost, or is this decision going to outlive the person who made it?
 
 No single dimension decides a choice on its own — a cheap, low-control option that locks you in for a decade is not automatically better than an expensive, high-control one your team can unwind in a quarter. The value of the model is forcing all six onto the table at once instead of defaulting to whichever one is loudest in the room, usually cost.
 
@@ -29,7 +29,7 @@ No single dimension decides a choice on its own — a cheap, low-control option 
 
 ## Applying the model: table formats
 
-**Delta Lake**, **Apache Iceberg**, and **Apache Hudi** all solve the same ACID-on-object-storage problem, covered in depth in [Table Formats: Delta vs Iceberg vs Hudi](../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/) — but the six dimensions surface why the "right" one depends on what your team already runs, not on a feature checklist:
+**Delta Lake**, **Apache Iceberg**, and **Apache Hudi** all solve the same ACID-on-object-storage problem, covered in depth in [Table Formats: Delta vs Iceberg vs Hudi](../../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/) — but the six dimensions surface why the "right" one depends on what your team already runs, not on a feature checklist:
 
 | Dimension | Delta Lake | Apache Iceberg | Apache Hudi |
 |---|---|---|---|
@@ -42,7 +42,7 @@ No single dimension decides a choice on its own — a cheap, low-control option 
 
 ## Applying the model: cloud providers
 
-The **AWS** and **Azure** service maps from [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](../01-foundations/07-aws-azure-hybrid-tooling/) map onto the same six dimensions differently depending on what your team and your existing estate already look like:
+The **AWS** and **Azure** service maps from [AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals](../../01-foundations/07-aws-azure-hybrid-tooling/) map onto the same six dimensions differently depending on what your team and your existing estate already look like:
 
 | Dimension | AWS | Azure |
 |---|---|---|
@@ -72,7 +72,7 @@ Hybrid and multi-cloud are rarely chosen for their own sake — a regulator requ
 
 ## Applying the model: build vs. buy vs. compose
 
-The same three options from [Deciding Under Uncertainty](01-deciding-under-uncertainty/) run cleanly through all six dimensions, which is a useful way to check a build-vs-buy-vs-compose instinct before it goes into a room with a CFO, a CISO, and a CTO in it:
+The same three options from [Deciding Under Uncertainty](../01-deciding-under-uncertainty/) run cleanly through all six dimensions, which is a useful way to check a build-vs-buy-vs-compose instinct before it goes into a room with a CFO, a CISO, and a CTO in it:
 
 | Dimension | Build | Buy | Compose |
 |---|---|---|---|
@@ -89,7 +89,7 @@ Read as a table, compose's real advantage isn't that it's cheap or simple — it
 
 ---
 
-| [&larr; Previous: The Reference Architecture: Source to Ingest to Store to Transform to Serve to Consume](03-reference-architecture/) | [Next: Storage & Table Formats &rarr;](../04-storage-and-table-formats/) |
+| [&larr; Previous: The Reference Architecture: Source to Ingest to Store to Transform to Serve to Consume](../03-reference-architecture/) | [Next: Storage & Table Formats &rarr;](../../04-storage-and-table-formats/) |
 |:---|---:|
 
 <!-- prevnext:end -->

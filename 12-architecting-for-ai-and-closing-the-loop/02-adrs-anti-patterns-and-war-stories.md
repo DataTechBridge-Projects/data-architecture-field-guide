@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 7: The Frontier & The Defense &middot; Architecting for AI & Closing the Loop*
 
-An architect who makes the right call but never writes down why loses that decision the moment they change teams — the next person inherits a lakehouse with a vector database bolted on and no record of what constraint forced that shape, so they either repeat the analysis from scratch or, worse, "fix" something that was deliberate. [Architecting for AI: Feature Stores, Vector Databases, RAG & Governance Guardrails](01-architecting-for-ai/) just added real architectural weight to your platform — a feature store, a vector database, a governance layer extended over models; this topic is about how you make decisions like that defensible, catalog the ways they go wrong, and survive the moment someone senior asks you to justify them.
+An architect who makes the right call but never writes down why loses that decision the moment they change teams — the next person inherits a lakehouse with a vector database bolted on and no record of what constraint forced that shape, so they either repeat the analysis from scratch or, worse, "fix" something that was deliberate. [Architecting for AI: Feature Stores, Vector Databases, RAG & Governance Guardrails](../01-architecting-for-ai/) just added real architectural weight to your platform — a feature store, a vector database, a governance layer extended over models; this topic is about how you make decisions like that defensible, catalog the ways they go wrong, and survive the moment someone senior asks you to justify them.
 
 ## The architecture decision record: deciding in the open
 
@@ -73,7 +73,7 @@ Both war stories point at the same defense mechanism: an architect who can produ
 
 ---
 
-| [&larr; Previous: Architecting for AI: Feature Stores, Vector Databases, RAG & Governance Guardrails](01-architecting-for-ai/) | [Next: Capstone: Designing and Defending an AI-Ready Platform to the Board &rarr;](03-capstone-designing-and-defending-ai-ready-platform/) |
+| [&larr; Previous: Architecting for AI: Feature Stores, Vector Databases, RAG & Governance Guardrails](../01-architecting-for-ai/) | [Next: Capstone: Designing and Defending an AI-Ready Platform to the Board &rarr;](../03-capstone-designing-and-defending-ai-ready-platform/) |
 |:---|---:|
 
 <!-- prevnext:end -->

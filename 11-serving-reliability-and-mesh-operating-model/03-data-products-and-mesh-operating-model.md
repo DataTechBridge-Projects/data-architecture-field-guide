@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 6: Delivering Value & Staying Up &middot; Serving, Reliability & the Mesh Operating Model*
 
-An architect who has just finished pinning SLAs and SLOs onto every serving output in [Reliability: SLAs/SLOs, Observability, Multi-Region DR & Tenancy](02-reliability-scale-and-multiregion-dr/) runs straight into the question that topic left open: who actually owns each of those promises once the platform serves dozens of domains, and no central team has the context to know whether a given table is fresh, correct, or fit for purpose today? Get the ownership model wrong and you land in one of two failure modes — a central data team that's a permanent bottleneck on every domain's roadmap, or dozens of domains publishing tables nobody can find, trust, or hold accountable. **Data mesh** is the answer to that ownership question: not better tooling bolted onto a centralized data team, but a change in who owns the data and what standard they're held to. The [Data Mesh: Decentralized Domain Ownership](../02-architecture-patterns-deep-dive/05-data-mesh/) topic introduced this as an architecture pattern — decentralized ownership instead of one monolithic warehouse team; this topic is the operating-model deep-dive: what a data product actually is, how a domain team builds and runs one, and what breaks when the pattern is adopted without the operating model to match.
+An architect who has just finished pinning SLAs and SLOs onto every serving output in [Reliability: SLAs/SLOs, Observability, Multi-Region DR & Tenancy](../02-reliability-scale-and-multiregion-dr/) runs straight into the question that topic left open: who actually owns each of those promises once the platform serves dozens of domains, and no central team has the context to know whether a given table is fresh, correct, or fit for purpose today? Get the ownership model wrong and you land in one of two failure modes — a central data team that's a permanent bottleneck on every domain's roadmap, or dozens of domains publishing tables nobody can find, trust, or hold accountable. **Data mesh** is the answer to that ownership question: not better tooling bolted onto a centralized data team, but a change in who owns the data and what standard they're held to. The [Data Mesh: Decentralized Domain Ownership](../../02-architecture-patterns-deep-dive/05-data-mesh/) topic introduced this as an architecture pattern — decentralized ownership instead of one monolithic warehouse team; this topic is the operating-model deep-dive: what a data product actually is, how a domain team builds and runs one, and what breaks when the pattern is adopted without the operating model to match.
 
 ## The four principles of data mesh
 
@@ -57,7 +57,7 @@ The fix isn't abandoning the four principles — it's recognizing that domain ow
 
 ---
 
-| [&larr; Previous: Reliability: SLAs/SLOs, Observability, Multi-Region DR & Tenancy](02-reliability-scale-and-multiregion-dr/) | [Next: Architecting for AI & Closing the Loop &rarr;](../12-architecting-for-ai-and-closing-the-loop/) |
+| [&larr; Previous: Reliability: SLAs/SLOs, Observability, Multi-Region DR & Tenancy](../02-reliability-scale-and-multiregion-dr/) | [Next: Architecting for AI & Closing the Loop &rarr;](../../12-architecting-for-ai-and-closing-the-loop/) |
 |:---|---:|
 
 <!-- prevnext:end -->

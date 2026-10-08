@@ -9,7 +9,7 @@ nav_order: 6
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-An architect who agrees to "real-time reporting" without pinning down what that phrase means to the stakeholder saying it will either over-build (streaming infrastructure for a dashboard that only needed a five-minute refresh) or under-build (a nightly batch job promised as "real-time" that a doctor is now relying on for a lab alert). [From Legacy ETL to Modern ELT](05-legacy-etl-to-modern-elt/) covered how data moves through a pipeline; this topic covers how *fast* — and precisely which of three genuinely different speeds "fast" means.
+An architect who agrees to "real-time reporting" without pinning down what that phrase means to the stakeholder saying it will either over-build (streaming infrastructure for a dashboard that only needed a five-minute refresh) or under-build (a nightly batch job promised as "real-time" that a doctor is now relying on for a lab alert). [From Legacy ETL to Modern ELT](../05-legacy-etl-to-modern-elt/) covered how data moves through a pipeline; this topic covers how *fast* — and precisely which of three genuinely different speeds "fast" means.
 
 ## The latency spectrum, precisely
 
@@ -78,7 +78,7 @@ Getting this choice right — and building whichever tier you land on with the f
 
 ---
 
-| [&larr; Previous: From Legacy ETL to Modern ELT: Bridging Talend & Informatica-Style Tools](05-legacy-etl-to-modern-elt/) | [Next: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals &rarr;](07-aws-azure-hybrid-tooling/) |
+| [&larr; Previous: From Legacy ETL to Modern ELT: Bridging Talend & Informatica-Style Tools](../05-legacy-etl-to-modern-elt/) | [Next: AWS, Azure & Hybrid/Multi-Cloud Tooling for Data Professionals &rarr;](../07-aws-azure-hybrid-tooling/) |
 |:---|---:|
 
 <!-- prevnext:end -->

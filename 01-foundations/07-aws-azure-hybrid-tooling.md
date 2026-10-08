@@ -9,7 +9,7 @@ nav_order: 7
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-An architect who only knows one cloud vendor's service names will still design the *shape* of a system correctly but will burn weeks re-learning the *implementation* every time a client, employer, or acquisition runs on the other one — and will completely misjudge the cost and complexity of a genuinely hybrid estate, which is now the default rather than the exception. [Batch, Near-Real-Time & Real-Time Processing](06-batch-realtime-and-robust-pipelines/) established the latency tiers a pipeline can run at; this topic is about *where* that pipeline actually runs — the concrete AWS and Azure services that implement ingestion, storage, transformation, and serving, and what changes when they have to work together across a cloud boundary instead of inside just one.
+An architect who only knows one cloud vendor's service names will still design the *shape* of a system correctly but will burn weeks re-learning the *implementation* every time a client, employer, or acquisition runs on the other one — and will completely misjudge the cost and complexity of a genuinely hybrid estate, which is now the default rather than the exception. [Batch, Near-Real-Time & Real-Time Processing](../06-batch-realtime-and-robust-pipelines/) established the latency tiers a pipeline can run at; this topic is about *where* that pipeline actually runs — the concrete AWS and Azure services that implement ingestion, storage, transformation, and serving, and what changes when they have to work together across a cloud boundary instead of inside just one.
 
 ## AWS for data professionals
 
@@ -49,7 +49,7 @@ None of this makes hybrid or multi-cloud wrong — a regulated bank with data-re
 
 ---
 
-| [&larr; Previous: Batch, Near-Real-Time & Real-Time Processing: Building Robust Pipelines](06-batch-realtime-and-robust-pipelines/) | [Next: Migrating a Legacy Warehouse to the Cloud: Patterns & Pitfalls &rarr;](08-migrating-legacy-warehouse-to-cloud/) |
+| [&larr; Previous: Batch, Near-Real-Time & Real-Time Processing: Building Robust Pipelines](../06-batch-realtime-and-robust-pipelines/) | [Next: Migrating a Legacy Warehouse to the Cloud: Patterns & Pitfalls &rarr;](../08-migrating-legacy-warehouse-to-cloud/) |
 |:---|---:|
 
 <!-- prevnext:end -->

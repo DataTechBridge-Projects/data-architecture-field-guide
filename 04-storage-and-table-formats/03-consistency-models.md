@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 3: Designing the Data Layer &middot; Storage & Table Formats*
 
-[Table Formats: Delta vs Iceberg vs Hudi](02-table-formats-delta-iceberg-hudi/) explained how a transaction log turns a directory of files into something that behaves like a table — but that log only protects you if every reader and writer agrees, the instant a write completes, on what the storage layer will actually hand back when asked. That's not a given: it's the exact **CAP**/**PACELC** trade-off from [ACID, BASE & the CAP Theorem](../01-foundations/01-acid-base-and-cap-theorem/) made concrete, applied to one specific system — the object store underneath everything in this group. An architect who assumes object storage always returns the latest write will eventually debug a pipeline that "randomly" drops or duplicates rows, when the real cause was never random at all.
+[Table Formats: Delta vs Iceberg vs Hudi](../02-table-formats-delta-iceberg-hudi/) explained how a transaction log turns a directory of files into something that behaves like a table — but that log only protects you if every reader and writer agrees, the instant a write completes, on what the storage layer will actually hand back when asked. That's not a given: it's the exact **CAP**/**PACELC** trade-off from [ACID, BASE & the CAP Theorem](../../01-foundations/01-acid-base-and-cap-theorem/) made concrete, applied to one specific system — the object store underneath everything in this group. An architect who assumes object storage always returns the latest write will eventually debug a pipeline that "randomly" drops or duplicates rows, when the real cause was never random at all.
 
 ## Read-After-Write Consistency, Defined
 
@@ -47,13 +47,13 @@ Object storage being strongly consistent today doesn't retire this concern — i
 {: .important }
 > Never treat a raw storage listing as the current state of a table. Always resolve state through the table format's log or snapshot — the atomicity boundary lives there, not in the object store's directory semantics — and any CDC or streaming consumer that bypasses it is one race condition away from a duplicate or dropped event that no retry will fix.
 
-This is exactly the PACELC trade-off, not just CAP: even with no partition and a healthy network, a system choosing to serve reads with minimum latency (from a nearby replica, before full propagation) versus waiting for guaranteed-fresh consistency is choosing Latency over Consistency on an ordinary Tuesday. The [Ingestion Decisions](../06-ingestion-and-streaming-decisions/01-ingestion-decisions-batch-incremental-cdc/) topic later in this course, and its treatment of exactly-once semantics, both assume this lesson: correctness comes from committing through a log, never from racing a listing call.
+This is exactly the PACELC trade-off, not just CAP: even with no partition and a healthy network, a system choosing to serve reads with minimum latency (from a nearby replica, before full propagation) versus waiting for guaranteed-fresh consistency is choosing Latency over Consistency on an ordinary Tuesday. The [Ingestion Decisions](../../06-ingestion-and-streaming-decisions/01-ingestion-decisions-batch-incremental-cdc/) topic later in this course, and its treatment of exactly-once semantics, both assume this lesson: correctness comes from committing through a log, never from racing a listing call.
 
 <!-- prevnext:start -->
 
 ---
 
-| [&larr; Previous: Table Formats: Delta vs Iceberg vs Hudi](02-table-formats-delta-iceberg-hudi/) | [Next: Dimensional Modeling for the Cloud Era &rarr;](../05-dimensional-modeling-cloud-era/) |
+| [&larr; Previous: Table Formats: Delta vs Iceberg vs Hudi](../02-table-formats-delta-iceberg-hudi/) | [Next: Dimensional Modeling for the Cloud Era &rarr;](../../05-dimensional-modeling-cloud-era/) |
 |:---|---:|
 
 <!-- prevnext:end -->

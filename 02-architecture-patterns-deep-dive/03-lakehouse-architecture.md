@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 2: The Architecture Landscape &middot; Architecture Patterns Deep Dive*
 
-An architect who has just finished weighing [Kappa Architecture: Stream-Only Processing](02-kappa-architecture/) against Lambda is still implicitly choosing *how* data gets processed — but a second, equally consequential question sits underneath it: where does the processed data actually live, and does that storage layer force you to pick between a warehouse's guarantees and a lake's flexibility? Getting this wrong means either paying warehouse prices to store data nobody queries with BI tools, or watching a lake's schema drift and lack of transactions quietly poison every downstream report. Lakehouse Architecture exists to make that an obsolete trade-off: one storage layer, built on cheap object storage, that behaves like a warehouse when a BI analyst needs it to and like a lake when a data scientist needs it to.
+An architect who has just finished weighing [Kappa Architecture: Stream-Only Processing](../02-kappa-architecture/) against Lambda is still implicitly choosing *how* data gets processed — but a second, equally consequential question sits underneath it: where does the processed data actually live, and does that storage layer force you to pick between a warehouse's guarantees and a lake's flexibility? Getting this wrong means either paying warehouse prices to store data nobody queries with BI tools, or watching a lake's schema drift and lack of transactions quietly poison every downstream report. Lakehouse Architecture exists to make that an obsolete trade-off: one storage layer, built on cheap object storage, that behaves like a warehouse when a BI analyst needs it to and like a lake when a data scientist needs it to.
 
 ## Two worlds that used to require two systems
 
@@ -41,7 +41,7 @@ flowchart LR
     TF -. time travel .-> AUD[Audit / debugging queries]
 ```
 
-This is the same underlying idea explored in more depth in [Table Formats: Delta vs Iceberg vs Hudi](../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/) — that topic covers how the three formats differ in their concurrency model and catalog integration; this one is about the architectural payoff of adopting any of them.
+This is the same underlying idea explored in more depth in [Table Formats: Delta vs Iceberg vs Hudi](../../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/) — that topic covers how the three formats differ in their concurrency model and catalog integration; this one is about the architectural payoff of adopting any of them.
 
 ## Advantages and challenges
 
@@ -58,7 +58,7 @@ A lakehouse is the right foundation whenever an organization is tired of paying 
 
 ---
 
-| [&larr; Previous: Kappa Architecture: Stream-Only Processing](02-kappa-architecture/) | [Next: Medallion Architecture: Bronze/Silver/Gold &rarr;](04-medallion-architecture/) |
+| [&larr; Previous: Kappa Architecture: Stream-Only Processing](../02-kappa-architecture/) | [Next: Medallion Architecture: Bronze/Silver/Gold &rarr;](../04-medallion-architecture/) |
 |:---|---:|
 
 <!-- prevnext:end -->

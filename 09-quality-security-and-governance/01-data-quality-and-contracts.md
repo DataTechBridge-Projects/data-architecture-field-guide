@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 5: Running It Like a Platform &middot; Quality, Security & Governance*
 
-A pipeline that runs every night without failing is not the same thing as a pipeline you can trust — [DataOps, Orchestration & Metadata](../08-dataops-orchestration-and-metadata/) gets a job scheduled, retried, and traceable end to end, but none of that tells you whether the numbers it produced are actually correct, or whether a schema that "just worked" yesterday quietly broke a downstream report today. An architect who only optimizes for pipelines *running* is optimizing for the wrong failure mode — a page at 2 a.m. is expensive, but a wrong number that sails silently into a board deck is worse, because nobody even knows to distrust it. This topic is about making correctness an engineered property of the platform instead of a hope pinned on the last team that touched the data.
+A pipeline that runs every night without failing is not the same thing as a pipeline you can trust — [DataOps, Orchestration & Metadata](../../08-dataops-orchestration-and-metadata/) gets a job scheduled, retried, and traceable end to end, but none of that tells you whether the numbers it produced are actually correct, or whether a schema that "just worked" yesterday quietly broke a downstream report today. An architect who only optimizes for pipelines *running* is optimizing for the wrong failure mode — a page at 2 a.m. is expensive, but a wrong number that sails silently into a board deck is worse, because nobody even knows to distrust it. This topic is about making correctness an engineered property of the platform instead of a hope pinned on the last team that touched the data.
 
 ## Why trust is the product
 
@@ -25,7 +25,7 @@ The earlier a broken batch is caught, the cheaper it is to fix. A check that fai
 
 ## Data contracts: the agreement a producer can't quietly break
 
-A **data contract** formalizes the producer-consumer relationship as an explicit, versioned interface instead of tribal knowledge passed around in a Slack thread. It declares a dataset's schema, the semantics of each field (what a column actually means, and in what unit), a freshness guarantee, and a quality threshold — and, critically, it's *enforced*: a change that violates the contract fails a build instead of shipping quietly. [The dbt Paradigm](../07-transformation-and-modern-data-stack/02-dbt-paradigm-contracts-idempotency/) already covered one concrete mechanism for this inside the warehouse — `contract: enforced: true` on a dbt model plus schema tests. The architectural idea generalizes well beyond that one tool: any team whose system emits events or tables that another team consumes should publish a contract for it, the same way a backend team publishes an API spec instead of leaving another team to reverse-engineer the JSON by trial and error.
+A **data contract** formalizes the producer-consumer relationship as an explicit, versioned interface instead of tribal knowledge passed around in a Slack thread. It declares a dataset's schema, the semantics of each field (what a column actually means, and in what unit), a freshness guarantee, and a quality threshold — and, critically, it's *enforced*: a change that violates the contract fails a build instead of shipping quietly. [The dbt Paradigm](../../07-transformation-and-modern-data-stack/02-dbt-paradigm-contracts-idempotency/) already covered one concrete mechanism for this inside the warehouse — `contract: enforced: true` on a dbt model plus schema tests. The architectural idea generalizes well beyond that one tool: any team whose system emits events or tables that another team consumes should publish a contract for it, the same way a backend team publishes an API spec instead of leaving another team to reverse-engineer the JSON by trial and error.
 
 ## Schema evolution and breaking changes
 
@@ -53,7 +53,7 @@ Getting a single dataset's shape and freshness right is necessary but not suffic
 
 ---
 
-| [&larr; Previous: Quality, Security & Governance](./) | [Next: Master Data Management: Golden Records, Matching & Stewardship &rarr;](02-master-data-management/) |
+| [&larr; Previous: Quality, Security & Governance](../) | [Next: Master Data Management: Golden Records, Matching & Stewardship &rarr;](../02-master-data-management/) |
 |:---|---:|
 
 <!-- prevnext:end -->

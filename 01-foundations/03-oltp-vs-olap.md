@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-Without this distinction clearly in mind, an architect will eventually approve running heavy analytical reports straight against the production order-taking database — and then get paged when Black Friday checkout traffic grinds to a halt because a dashboard is holding row locks. [Data Architecture Tenets & Styles](02-tenets-and-styles/) established that monolithic, distributed, and cloud are different bets about *where compute and storage live*; this topic is about a different, equally fundamental split — the shape of the *workload itself* — and it's the reason a warehouse or lake exists as a separate system in the first place.
+Without this distinction clearly in mind, an architect will eventually approve running heavy analytical reports straight against the production order-taking database — and then get paged when Black Friday checkout traffic grinds to a halt because a dashboard is holding row locks. [Data Architecture Tenets & Styles](../02-tenets-and-styles/) established that monolithic, distributed, and cloud are different bets about *where compute and storage live*; this topic is about a different, equally fundamental split — the shape of the *workload itself* — and it's the reason a warehouse or lake exists as a separate system in the first place.
 
 ## Two workloads, two sets of demands
 
@@ -41,7 +41,7 @@ Every subsequent topic in this group assumes this split. The data-modeling refre
 
 ---
 
-| [&larr; Previous: Data Architecture Tenets & Styles: Monolithic, Distributed, Cloud](02-tenets-and-styles/) | [Next: Data Modeling, Database Types & Normalization Refresher &rarr;](04-data-modeling-refresher/) |
+| [&larr; Previous: Data Architecture Tenets & Styles: Monolithic, Distributed, Cloud](../02-tenets-and-styles/) | [Next: Data Modeling, Database Types & Normalization Refresher &rarr;](../04-data-modeling-refresher/) |
 |:---|---:|
 
 <!-- prevnext:end -->

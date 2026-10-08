@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 5: Running It Like a Platform &middot; DataOps, Orchestration & Metadata*
 
-Once pipelines deploy themselves through CI/CD across a dozen orchestrated DAGs, an architect runs into a question the [previous topic on DataOps and orchestration patterns](01-dataops-cicd-iac-orchestration/) never had to answer: if this column changes, what breaks, and who finds out before a stakeholder does? Getting caught without an answer — during an incident at 2 a.m., or a compliance audit with a two-week deadline — is the concrete cost of skipping **metadata**, **lineage**, and the **data catalog**, which is why the same platform discipline that automated deployment also has to automate knowing what's out there and how it connects.
+Once pipelines deploy themselves through CI/CD across a dozen orchestrated DAGs, an architect runs into a question the [previous topic on DataOps and orchestration patterns](../01-dataops-cicd-iac-orchestration/) never had to answer: if this column changes, what breaks, and who finds out before a stakeholder does? Getting caught without an answer — during an incident at 2 a.m., or a compliance audit with a two-week deadline — is the concrete cost of skipping **metadata**, **lineage**, and the **data catalog**, which is why the same platform discipline that automated deployment also has to automate knowing what's out there and how it connects.
 
 ## Metadata as the Platform's Nervous System
 
@@ -54,7 +54,7 @@ A catalog populated once at launch and never refreshed decays into the same untr
 
 ---
 
-| [&larr; Previous: DataOps & Platform Engineering: CI/CD, IaC/GitOps & Orchestration Patterns](01-dataops-cicd-iac-orchestration/) | [Next: Quality, Security & Governance &rarr;](../09-quality-security-and-governance/) |
+| [&larr; Previous: DataOps & Platform Engineering: CI/CD, IaC/GitOps & Orchestration Patterns](../01-dataops-cicd-iac-orchestration/) | [Next: Quality, Security & Governance &rarr;](../../09-quality-security-and-governance/) |
 |:---|---:|
 
 <!-- prevnext:end -->

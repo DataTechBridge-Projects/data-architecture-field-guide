@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 7: The Frontier & The Defense &middot; Architecting for AI & Closing the Loop*
 
-An architect who ships a warehouse that serves BI dashboards flawlessly can still watch an ML initiative fail for reasons that have nothing to do with the model — a training set that doesn't match what production actually sees, a nightly batch feature that a real-time fraud check needs in milliseconds, or a chatbot that confidently cites a policy the company retired two years ago. None of those are data-science problems; they are platform problems, and they land on the architect's desk. This topic builds directly on [Data Products & the Data Mesh Operating Model](../11-serving-reliability-and-mesh-operating-model/03-data-products-and-mesh-operating-model/): everything that group covered — a platform that serves reliably, publishes trustworthy data products, and stays up under load — is exactly what an AI workload consumes, only faster, hungrier, and less forgiving of drift than any BI dashboard ever was.
+An architect who ships a warehouse that serves BI dashboards flawlessly can still watch an ML initiative fail for reasons that have nothing to do with the model — a training set that doesn't match what production actually sees, a nightly batch feature that a real-time fraud check needs in milliseconds, or a chatbot that confidently cites a policy the company retired two years ago. None of those are data-science problems; they are platform problems, and they land on the architect's desk. This topic builds directly on [Data Products & the Data Mesh Operating Model](../../11-serving-reliability-and-mesh-operating-model/03-data-products-and-mesh-operating-model/): everything that group covered — a platform that serves reliably, publishes trustworthy data products, and stays up under load — is exactly what an AI workload consumes, only faster, hungrier, and less forgiving of drift than any BI dashboard ever was.
 
 ## Why AI breaks your data platform: the two-speed problem
 
@@ -76,7 +76,7 @@ None of this requires ripping out your lakehouse. An AI-ready platform is your e
 
 ---
 
-| [&larr; Previous: Architecting for AI & Closing the Loop](./) | [Next: Architecture Decision Records, Anti-Patterns & War Stories &rarr;](02-adrs-anti-patterns-and-war-stories/) |
+| [&larr; Previous: Architecting for AI & Closing the Loop](../) | [Next: Architecture Decision Records, Anti-Patterns & War Stories &rarr;](../02-adrs-anti-patterns-and-war-stories/) |
 |:---|---:|
 
 <!-- prevnext:end -->

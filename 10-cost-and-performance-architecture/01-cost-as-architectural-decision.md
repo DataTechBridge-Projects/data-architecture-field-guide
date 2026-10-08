@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 5: Running It Like a Platform &middot; Cost & Performance Architecture*
 
-An architect can design a platform with airtight access control, clean lineage, and a well-enforced data contract, hand it over, and still get called into a budget review three months later to explain why the monthly cloud bill is four times what finance approved — because nobody treated cost as a design constraint on the same footing as consistency or latency. [Security & Governance](../09-quality-security-and-governance/03-security-and-governance/) settled who can touch the data and on what legal basis; trust and access are solved problems by the time you get here. This topic asks the question that governance doesn't answer at all: is the platform affordable to run at the scale you're about to put it at? A locked-down, well-governed platform that quietly bankrupts its own budget is still a failed architecture, and the failure is invisible until the invoice arrives.
+An architect can design a platform with airtight access control, clean lineage, and a well-enforced data contract, hand it over, and still get called into a budget review three months later to explain why the monthly cloud bill is four times what finance approved — because nobody treated cost as a design constraint on the same footing as consistency or latency. [Security & Governance](../../09-quality-security-and-governance/03-security-and-governance/) settled who can touch the data and on what legal basis; trust and access are solved problems by the time you get here. This topic asks the question that governance doesn't answer at all: is the platform affordable to run at the scale you're about to put it at? A locked-down, well-governed platform that quietly bankrupts its own budget is still a failed architecture, and the failure is invisible until the invoice arrives.
 
 ## Cost Is a Design Decision, Not a Finance Afterthought
 
@@ -50,7 +50,7 @@ Running an actual cost-estimation exercise before committing to a design — ske
 
 ---
 
-| [&larr; Previous: Cost & Performance Architecture](./) | [Next: Performance Architecture: Tuning by Workload &rarr;](02-performance-tuning-by-workload/) |
+| [&larr; Previous: Cost & Performance Architecture](../) | [Next: Performance Architecture: Tuning by Workload &rarr;](../02-performance-tuning-by-workload/) |
 |:---|---:|
 
 <!-- prevnext:end -->

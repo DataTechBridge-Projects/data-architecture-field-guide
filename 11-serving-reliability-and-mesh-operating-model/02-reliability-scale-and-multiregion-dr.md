@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 6: Delivering Value & Staying Up &middot; Serving, Reliability & the Mesh Operating Model*
 
-The moment a semantic layer's metrics feed a reverse-ETL sync into Salesforce or a data API a partner's checkout page calls at 2am, you've quietly made a promise that data will be there, on time, and correct — and an architect who hasn't turned that promise into a measurable, monitored commitment finds out how serious it was during the incident review, not before. [The Serving Layer: BI, Semantic Layer, Reverse ETL & Data APIs](01-serving-layer-bi-semantic-reverse-etl-apis/) showed how many different consumers now depend on your platform directly; this topic is about keeping every one of those promises when something breaks — because at this point in the platform's life, something eventually will.
+The moment a semantic layer's metrics feed a reverse-ETL sync into Salesforce or a data API a partner's checkout page calls at 2am, you've quietly made a promise that data will be there, on time, and correct — and an architect who hasn't turned that promise into a measurable, monitored commitment finds out how serious it was during the incident review, not before. [The Serving Layer: BI, Semantic Layer, Reverse ETL & Data APIs](../01-serving-layer-bi-semantic-reverse-etl-apis/) showed how many different consumers now depend on your platform directly; this topic is about keeping every one of those promises when something breaks — because at this point in the platform's life, something eventually will.
 
 ## SLAs, SLOs & error budgets for data
 
@@ -61,7 +61,7 @@ Reliability, at this scale, stops being a single team's monitoring dashboard and
 
 ---
 
-| [&larr; Previous: The Serving Layer: BI, Semantic Layer, Reverse ETL & Data APIs](01-serving-layer-bi-semantic-reverse-etl-apis/) | [Next: Data Products & the Data Mesh Operating Model &rarr;](03-data-products-and-mesh-operating-model/) |
+| [&larr; Previous: The Serving Layer: BI, Semantic Layer, Reverse ETL & Data APIs](../01-serving-layer-bi-semantic-reverse-etl-apis/) | [Next: Data Products & the Data Mesh Operating Model &rarr;](../03-data-products-and-mesh-operating-model/) |
 |:---|---:|
 
 <!-- prevnext:end -->

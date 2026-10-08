@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 2: The Architecture Landscape &middot; The Architect's Decision Framework*
 
-An architect who has just finished mapping six named patterns can still freeze the first time a stakeholder asks "which one should we build, and by when" — because recognizing a pattern on a landscape and committing a real team, budget, and timeline to it are two different skills, and only the second one is the actual job. [Architecture Patterns Deep Dive](../02-architecture-patterns-deep-dive/) supplied the vocabulary of what's possible; this topic, opening **The Architect's Decision Framework**, supplies the discipline for choosing among those possibilities before every fact is in — because waiting for every fact is itself a decision, and usually the wrong one.
+An architect who has just finished mapping six named patterns can still freeze the first time a stakeholder asks "which one should we build, and by when" — because recognizing a pattern on a landscape and committing a real team, budget, and timeline to it are two different skills, and only the second one is the actual job. [Architecture Patterns Deep Dive](../../02-architecture-patterns-deep-dive/) supplied the vocabulary of what's possible; this topic, opening **The Architect's Decision Framework**, supplies the discipline for choosing among those possibilities before every fact is in — because waiting for every fact is itself a decision, and usually the wrong one.
 
 ## The architect's job: deciding under uncertainty
 
@@ -57,7 +57,7 @@ A decision that can only be justified to one of the three isn't ready for a room
 
 ---
 
-| [&larr; Previous: The Architect's Decision Framework](./) | [Next: The Evolution of Data Architecture: Warehouse to Lake to Lakehouse to Mesh/Fabric &rarr;](02-evolution-of-data-architecture/) |
+| [&larr; Previous: The Architect's Decision Framework](../) | [Next: The Evolution of Data Architecture: Warehouse to Lake to Lakehouse to Mesh/Fabric &rarr;](../02-evolution-of-data-architecture/) |
 |:---|---:|
 
 <!-- prevnext:end -->

@@ -9,7 +9,7 @@ nav_order: 9
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-Everything in this group has been building toward a single moment an architect faces repeatedly: a stakeholder describes a business problem, and the job is to turn it into a specific, defensible architecture choice — not recite the options. [Migrating a Legacy Warehouse to the Cloud](08-migrating-legacy-warehouse-to-cloud/) covered how to move an existing system; this closing topic covers how to choose the *right* system in the first place, and what it actually takes to grow into the person a business trusts to make that call.
+Everything in this group has been building toward a single moment an architect faces repeatedly: a stakeholder describes a business problem, and the job is to turn it into a specific, defensible architecture choice — not recite the options. [Migrating a Legacy Warehouse to the Cloud](../08-migrating-legacy-warehouse-to-cloud/) covered how to move an existing system; this closing topic covers how to choose the *right* system in the first place, and what it actually takes to grow into the person a business trusts to make that call.
 
 ## A step-by-step guide to choosing an architecture
 
@@ -45,7 +45,7 @@ None of this is a checklist to complete once — the architects worth learning f
 
 ---
 
-| [&larr; Previous: Migrating a Legacy Warehouse to the Cloud: Patterns & Pitfalls](08-migrating-legacy-warehouse-to-cloud/) | [Next: Architecture Patterns Deep Dive &rarr;](../02-architecture-patterns-deep-dive/) |
+| [&larr; Previous: Migrating a Legacy Warehouse to the Cloud: Patterns & Pitfalls](../08-migrating-legacy-warehouse-to-cloud/) | [Next: Architecture Patterns Deep Dive &rarr;](../../02-architecture-patterns-deep-dive/) |
 |:---|---:|
 
 <!-- prevnext:end -->

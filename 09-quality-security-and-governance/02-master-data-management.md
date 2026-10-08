@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 5: Running It Like a Platform &middot; Quality, Security & Governance*
 
-A data contract can guarantee that the `customers` table your team ships has the right columns, types, and freshness every time it's queried — but it can't guarantee that the row for "Rahul Singh" in the CRM and the row for "R. Singh" in billing are the same person. [Data Quality & Data Contracts](01-data-quality-and-contracts/) made correctness of a single dataset an engineered property; master data spans systems no single contract owns end to end, and that's a different problem entirely. **Master data management (MDM)** is the discipline that closes that gap: making sure the handful of entities every part of the business argues about — customer, product, account, vendor — resolve to exactly one trustworthy record, instead of a slightly different almost-right version living in each system that touches them.
+A data contract can guarantee that the `customers` table your team ships has the right columns, types, and freshness every time it's queried — but it can't guarantee that the row for "Rahul Singh" in the CRM and the row for "R. Singh" in billing are the same person. [Data Quality & Data Contracts](../01-data-quality-and-contracts/) made correctness of a single dataset an engineered property; master data spans systems no single contract owns end to end, and that's a different problem entirely. **Master data management (MDM)** is the discipline that closes that gap: making sure the handful of entities every part of the business argues about — customer, product, account, vendor — resolve to exactly one trustworthy record, instead of a slightly different almost-right version living in each system that touches them.
 
 ## Why the same customer has five names
 
@@ -42,7 +42,7 @@ flowchart LR
 
 The output of match, merge, and survivorship is the **golden record** — the single version of an entity every system is meant to treat as authoritative. Architecturally, there are two ways to implement this, and it's a build-vs-buy-vs-compose decision like any other: a **registry** style keeps each source system's data where it already lives and stores only a cross-reference of IDs plus the survived attributes, which is cheaper to stand up but means every consumer still has to know how to assemble the full picture; a **hub** style fully materializes the golden record as its own system of record and publishes it back out to every consuming system, which costs more to build and operate but gives every downstream system one place to look. Most MDM programs start as a registry for a single entity (usually customer) and only build toward a hub once the business case for a fully materialized golden record justifies the investment.
 
-A golden record doesn't stay static once it exists — a customer's segment, region, or tier on that record changes over time exactly like any other dimension attribute, which is the [Slowly Changing Dimensions](../05-dimensional-modeling-cloud-era/03-scd-and-conformed-dimensions/) problem, one layer upstream. An MDM hub has to decide whether an updated golden-record attribute overwrites the previous value or preserves it as history, and if a downstream `dim_customer` is built from that golden record, its SCD Type 2 versioning is only as correct as the golden record's own change history.
+A golden record doesn't stay static once it exists — a customer's segment, region, or tier on that record changes over time exactly like any other dimension attribute, which is the [Slowly Changing Dimensions](../../05-dimensional-modeling-cloud-era/03-scd-and-conformed-dimensions/) problem, one layer upstream. An MDM hub has to decide whether an updated golden-record attribute overwrites the previous value or preserves it as history, and if a downstream `dim_customer` is built from that golden record, its SCD Type 2 versioning is only as correct as the golden record's own change history.
 
 ## Stewardship: who owns fixing it when it's wrong
 
@@ -58,7 +58,7 @@ Not every team needs a dedicated MDM product on day one. A registry-style progra
 
 ---
 
-| [&larr; Previous: Data Quality & Data Contracts: How Much Quality Is Enough?](01-data-quality-and-contracts/) | [Next: Security & Governance: Access Control, Federated Governance & Compliance by Design &rarr;](03-security-and-governance/) |
+| [&larr; Previous: Data Quality & Data Contracts: How Much Quality Is Enough?](../01-data-quality-and-contracts/) | [Next: Security & Governance: Access Control, Federated Governance & Compliance by Design &rarr;](../03-security-and-governance/) |
 |:---|---:|
 
 <!-- prevnext:end -->

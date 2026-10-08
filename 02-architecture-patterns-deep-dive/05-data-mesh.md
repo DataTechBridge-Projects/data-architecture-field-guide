@@ -9,7 +9,7 @@ nav_order: 5
 
 *Part 2: The Architecture Landscape &middot; Architecture Patterns Deep Dive*
 
-[Medallion Architecture: Bronze/Silver/Gold](04-medallion-architecture/) solves how data gets progressively cleaned inside one lakehouse — but it quietly assumes a single team, or at least a single platform group, owns the whole bronze-to-gold pipeline for every domain in the business. That assumption breaks at scale: once you have dozens of source systems and hundreds of gold tables owned by one central data team, that team becomes the bottleneck every other team waits behind, and nobody outside it understands the domain context well enough to know if a "customer" table is actually correct. Data Mesh is the architectural response to that bottleneck — not a new storage technology, but an organizational and technical pattern that pushes data ownership out to the teams who understand the data best.
+[Medallion Architecture: Bronze/Silver/Gold](../04-medallion-architecture/) solves how data gets progressively cleaned inside one lakehouse — but it quietly assumes a single team, or at least a single platform group, owns the whole bronze-to-gold pipeline for every domain in the business. That assumption breaks at scale: once you have dozens of source systems and hundreds of gold tables owned by one central data team, that team becomes the bottleneck every other team waits behind, and nobody outside it understands the domain context well enough to know if a "customer" table is actually correct. Data Mesh is the architectural response to that bottleneck — not a new storage technology, but an organizational and technical pattern that pushes data ownership out to the teams who understand the data best.
 
 ## Four principles, not four technologies
 
@@ -60,7 +60,7 @@ Choose mesh over a centrally-owned warehouse or lakehouse when domain complexity
 
 ---
 
-| [&larr; Previous: Medallion Architecture: Bronze/Silver/Gold](04-medallion-architecture/) | [Next: Data Fabric: Metadata-Driven Integration &rarr;](06-data-fabric/) |
+| [&larr; Previous: Medallion Architecture: Bronze/Silver/Gold](../04-medallion-architecture/) | [Next: Data Fabric: Metadata-Driven Integration &rarr;](../06-data-fabric/) |
 |:---|---:|
 
 <!-- prevnext:end -->

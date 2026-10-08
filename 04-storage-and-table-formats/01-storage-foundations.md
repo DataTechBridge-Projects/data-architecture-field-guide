@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 3: Designing the Data Layer &middot; Storage & Table Formats*
 
-Every decision later in this guide — which table format to adopt, whether a workload should stream, how a warehouse gets modeled — rests on physical storage choices that are cheap to get right early and expensive to unwind later: the wrong file format or partitioning scheme doesn't throw an error, it just quietly makes every query and every dollar of compute more expensive, forever. [A Mental Model for Architecture Choices](../03-architects-decision-framework/04-mental-model-for-architecture-choices/) closed Part 2 with a reusable framework — cost, control, complexity, lock-in, team skill, reversibility — for evaluating architecture decisions; this topic opens Part 3, "Designing the Data Layer," by applying that framework to the most foundational layer of all: where bytes physically live and how they're shaped once they land there.
+Every decision later in this guide — which table format to adopt, whether a workload should stream, how a warehouse gets modeled — rests on physical storage choices that are cheap to get right early and expensive to unwind later: the wrong file format or partitioning scheme doesn't throw an error, it just quietly makes every query and every dollar of compute more expensive, forever. [A Mental Model for Architecture Choices](../../03-architects-decision-framework/04-mental-model-for-architecture-choices/) closed Part 2 with a reusable framework — cost, control, complexity, lock-in, team skill, reversibility — for evaluating architecture decisions; this topic opens Part 3, "Designing the Data Layer," by applying that framework to the most foundational layer of all: where bytes physically live and how they're shaped once they land there.
 
 ## Object Storage as the Foundation
 
@@ -67,7 +67,7 @@ Layout matters as much as codec: sorting or clustering data on the columns a que
 
 ---
 
-| [&larr; Previous: Storage & Table Formats](./) | [Next: Table Formats: Delta vs Iceberg vs Hudi &rarr;](02-table-formats-delta-iceberg-hudi/) |
+| [&larr; Previous: Storage & Table Formats](../) | [Next: Table Formats: Delta vs Iceberg vs Hudi &rarr;](../02-table-formats-delta-iceberg-hudi/) |
 |:---|---:|
 
 <!-- prevnext:end -->

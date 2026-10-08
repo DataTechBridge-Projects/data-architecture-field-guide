@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 2: The Architecture Landscape &middot; Architecture Patterns Deep Dive*
 
-An architect who has only ever shipped nightly batch jobs will eventually meet a stakeholder who wants a dashboard that reacts to what just happened, not to what happened last night — and reflexively rebuilding the whole pipeline around low latency is usually the wrong call, because most of that pipeline's value is in a complete, correct answer, not a fast one. This group opens Part 2: The Architecture Landscape, the section of this field guide where the tenets and workload trade-offs from [Choosing an Architecture & the Road to Becoming a Data Architect](../01-foundations/09-choosing-architecture-and-career-path/) turn into named, arguable patterns you can sketch on a whiteboard and defend in a design review. Lambda Architecture is the oldest and most literal of those patterns: rather than choosing between batch correctness and streaming speed, it runs both at once and reconciles them when a query is asked.
+An architect who has only ever shipped nightly batch jobs will eventually meet a stakeholder who wants a dashboard that reacts to what just happened, not to what happened last night — and reflexively rebuilding the whole pipeline around low latency is usually the wrong call, because most of that pipeline's value is in a complete, correct answer, not a fast one. This group opens Part 2: The Architecture Landscape, the section of this field guide where the tenets and workload trade-offs from [Choosing an Architecture & the Road to Becoming a Data Architect](../../01-foundations/09-choosing-architecture-and-career-path/) turn into named, arguable patterns you can sketch on a whiteboard and defend in a design review. Lambda Architecture is the oldest and most literal of those patterns: rather than choosing between batch correctness and streaming speed, it runs both at once and reconciles them when a query is asked.
 
 ## The three layers
 
@@ -46,7 +46,7 @@ def serve(query):
     return merge(batch_result, speed_result)           # reconcile the overlap window
 ```
 
-In practice, the speed layer is almost always **NRT** rather than true **RT**: most stream processors emit updates in micro-batches every few seconds rather than reacting event-by-event, which is a deliberate, cheaper trade-off precisely because the batch layer is guaranteed to correct any staleness within one batch cycle anyway. Whether NRT is even fast enough for a given workload — or whether true RT is unavoidable — is a question worth pinning down on its own terms; see [Should This Be Streaming At All?](../06-ingestion-and-streaming-decisions/02-should-this-be-streaming-at-all/).
+In practice, the speed layer is almost always **NRT** rather than true **RT**: most stream processors emit updates in micro-batches every few seconds rather than reacting event-by-event, which is a deliberate, cheaper trade-off precisely because the batch layer is guaranteed to correct any staleness within one batch cycle anyway. Whether NRT is even fast enough for a given workload — or whether true RT is unavoidable — is a question worth pinning down on its own terms; see [Should This Be Streaming At All?](../../06-ingestion-and-streaming-decisions/02-should-this-be-streaming-at-all/).
 
 ## Advantages and challenges
 
@@ -63,7 +63,7 @@ Lambda earns its complexity when historical correctness genuinely matters — fi
 
 ---
 
-| [&larr; Previous: Architecture Patterns Deep Dive](./) | [Next: Kappa Architecture: Stream-Only Processing &rarr;](02-kappa-architecture/) |
+| [&larr; Previous: Architecture Patterns Deep Dive](../) | [Next: Kappa Architecture: Stream-Only Processing &rarr;](../02-kappa-architecture/) |
 |:---|---:|
 
 <!-- prevnext:end -->

@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 7: The Frontier & The Defense &middot; Architecting for AI & Closing the Loop*
 
-Everything in this guide has been rehearsal for a specific, recurring moment in an architect's career: a room full of people who control budget and risk tolerance, asking you to justify a system that doesn't fully exist yet. You won't get there by reciting definitions of the medallion pattern or the CAP theorem — you get there by having actually designed something end to end and being able to defend every layer of it. [Architecture Decision Records, Anti-Patterns & War Stories](02-adrs-anti-patterns-and-war-stories/) gave you the tools to document and defend a decision; this capstone is where you use those tools on a full platform, not a single choice, by walking through one worked example from a blank page to a board-ready defense.
+Everything in this guide has been rehearsal for a specific, recurring moment in an architect's career: a room full of people who control budget and risk tolerance, asking you to justify a system that doesn't fully exist yet. You won't get there by reciting definitions of the medallion pattern or the CAP theorem — you get there by having actually designed something end to end and being able to defend every layer of it. [Architecture Decision Records, Anti-Patterns & War Stories](../02-adrs-anti-patterns-and-war-stories/) gave you the tools to document and defend a decision; this capstone is where you use those tools on a full platform, not a single choice, by walking through one worked example from a blank page to a board-ready defense.
 
 ## The brief: a hypothetical company's requirements, constraints & AI mandate
 
@@ -17,7 +17,7 @@ To make this concrete rather than abstract, walk through it with one company: **
 
 - **Requirements**: a product-recommendation feature for the e-commerce site (sub-200ms response), and a customer-support chatbot that can answer questions grounded in the company's actual return policy, warranty terms, and product manuals — not the model's general training knowledge.
 - **Constraints**: a data engineering team of six, no dedicated ML infrastructure team, a board that just approved a cloud migration and is wary of a second multi-year platform project, and existing PII (customer addresses, purchase history) already under a data contract and access-control regime.
-- **The AI mandate**: leadership wants "AI in production within two quarters," which — read past the buzzword, the way [Deciding Under Uncertainty](../03-architects-decision-framework/01-deciding-under-uncertainty/) taught you to read any stakeholder ask — actually decomposes into two distinct, separable problems: a low-latency inference workload (recommendations) and a retrieval-grounded generation workload (support chatbot).
+- **The AI mandate**: leadership wants "AI in production within two quarters," which — read past the buzzword, the way [Deciding Under Uncertainty](../../03-architects-decision-framework/01-deciding-under-uncertainty/) taught you to read any stakeholder ask — actually decomposes into two distinct, separable problems: a low-latency inference workload (recommendations) and a retrieval-grounded generation workload (support chatbot).
 
 This is the same move as every requirements-gathering exercise earlier in the course: the stated ask ("we want AI") is not the actual set of constraints you design against. The real brief is two workloads, a six-person team, a wary board, and an existing governance regime that the new work has to extend rather than bypass.
 
@@ -25,7 +25,7 @@ Put a number on "two quarters" and the design space shrinks fast: eight or nine 
 
 ## Designing the architecture end-to-end: one decision per layer
 
-Solstice's existing platform is already, in effect, an instance of the [reference architecture](../03-architects-decision-framework/03-reference-architecture/) — source, ingest, store, transform, serve, consume. The capstone discipline is not designing something new; it's re-walking that same canonical diagram and making one explicit, justified decision at each layer for the two new AI workloads, using the [mental model's](../03-architects-decision-framework/04-mental-model-for-architecture-choices/) six dimensions — cost, control, complexity, lock-in, team skill, reversibility — to weigh each one.
+Solstice's existing platform is already, in effect, an instance of the [reference architecture](../../03-architects-decision-framework/03-reference-architecture/) — source, ingest, store, transform, serve, consume. The capstone discipline is not designing something new; it's re-walking that same canonical diagram and making one explicit, justified decision at each layer for the two new AI workloads, using the [mental model's](../../03-architects-decision-framework/04-mental-model-for-architecture-choices/) six dimensions — cost, control, complexity, lock-in, team skill, reversibility — to weigh each one.
 
 | Layer | Decision | Why (mental-model lens) |
 |---|---|---|
@@ -97,7 +97,7 @@ The thesis this entire guide has been building toward is unglamorous but durable
 
 ---
 
-| [&larr; Previous: Architecture Decision Records, Anti-Patterns & War Stories](02-adrs-anti-patterns-and-war-stories/) | [Next: Hands-on Tutorials &rarr;](../13-hands-on-tutorials/) |
+| [&larr; Previous: Architecture Decision Records, Anti-Patterns & War Stories](../02-adrs-anti-patterns-and-war-stories/) | [Next: Hands-on Tutorials &rarr;](../../13-hands-on-tutorials/) |
 |:---|---:|
 
 <!-- prevnext:end -->

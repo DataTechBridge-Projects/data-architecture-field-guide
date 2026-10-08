@@ -9,7 +9,7 @@ nav_order: 3
 
 *Part 2: The Architecture Landscape &middot; The Architect's Decision Framework*
 
-Every pattern and lineage from the last two topics — Lambda vs. Kappa, warehouse vs. lakehouse, centralized vs. mesh — is a different answer to the same underlying six-part question, and an architect who can't draw that shared skeleton from memory in a design review or an interview hasn't actually internalized any of those patterns, only memorized their names. [The Evolution of Data Architecture](02-evolution-of-data-architecture/) showed why the pattern changes over time; this topic gives you the one diagram every one of those patterns is a variation of, so you can place any architecture — past, present, or proposed — onto it in seconds.
+Every pattern and lineage from the last two topics — Lambda vs. Kappa, warehouse vs. lakehouse, centralized vs. mesh — is a different answer to the same underlying six-part question, and an architect who can't draw that shared skeleton from memory in a design review or an interview hasn't actually internalized any of those patterns, only memorized their names. [The Evolution of Data Architecture](../02-evolution-of-data-architecture/) showed why the pattern changes over time; this topic gives you the one diagram every one of those patterns is a variation of, so you can place any architecture — past, present, or proposed — onto it in seconds.
 
 ## The canonical layers: Source, Ingest, Store, Transform, Serve, Consume
 
@@ -70,7 +70,7 @@ Metadata, cost, performance, and security decisions don't fit neatly into a sing
 
 ## Batch + stream layering: Lambda vs. Kappa at the reference level
 
-The Lambda-vs-Kappa choice from the previous group is really a statement about what happens between Ingest and Transform, not a separate architecture bolted onto this one. **Lambda** runs two parallel paths through those middle boxes — a batch path recomputing complete history and a speed path processing only what's arrived recently — that reconcile at Serve, covered in [Lambda Architecture](../02-architecture-patterns-deep-dive/01-lambda-architecture/). **Kappa** collapses that to a single stream-only path from Ingest through Transform, relying on replaying the log itself for reprocessing instead of maintaining a separate batch path, covered in [Kappa Architecture](../02-architecture-patterns-deep-dive/02-kappa-architecture/). In both cases, Store is typically the same lakehouse either path writes into — the six-box diagram doesn't grow a seventh box for streaming; streaming is a way of drawing a second line through boxes two, three, and four.
+The Lambda-vs-Kappa choice from the previous group is really a statement about what happens between Ingest and Transform, not a separate architecture bolted onto this one. **Lambda** runs two parallel paths through those middle boxes — a batch path recomputing complete history and a speed path processing only what's arrived recently — that reconcile at Serve, covered in [Lambda Architecture](../../02-architecture-patterns-deep-dive/01-lambda-architecture/). **Kappa** collapses that to a single stream-only path from Ingest through Transform, relying on replaying the log itself for reprocessing instead of maintaining a separate batch path, covered in [Kappa Architecture](../../02-architecture-patterns-deep-dive/02-kappa-architecture/). In both cases, Store is typically the same lakehouse either path writes into — the six-box diagram doesn't grow a seventh box for streaming; streaming is a way of drawing a second line through boxes two, three, and four.
 
 {: .important }
 > Every pattern in this course — Lambda, Kappa, mesh, fabric, medallion — is a variation on where within these six boxes complexity gets absorbed, never an exception to the six boxes themselves. If you can't place a proposed architecture onto Source → Ingest → Store → Transform → Serve → Consume, you don't understand it yet — you've only memorized its name.
@@ -79,7 +79,7 @@ The Lambda-vs-Kappa choice from the previous group is really a statement about w
 
 ---
 
-| [&larr; Previous: The Evolution of Data Architecture: Warehouse to Lake to Lakehouse to Mesh/Fabric](02-evolution-of-data-architecture/) | [Next: A Mental Model for Architecture Choices: Table Formats, Cloud Providers, Hybrid Cloud & Build vs Buy &rarr;](04-mental-model-for-architecture-choices/) |
+| [&larr; Previous: The Evolution of Data Architecture: Warehouse to Lake to Lakehouse to Mesh/Fabric](../02-evolution-of-data-architecture/) | [Next: A Mental Model for Architecture Choices: Table Formats, Cloud Providers, Hybrid Cloud & Build vs Buy &rarr;](../04-mental-model-for-architecture-choices/) |
 |:---|---:|
 
 <!-- prevnext:end -->

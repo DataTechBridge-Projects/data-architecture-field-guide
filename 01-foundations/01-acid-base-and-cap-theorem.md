@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-An architect who can't state precisely what a system gives up under load will eventually approve a design that loses a transaction, shows two customers two different balances at the same instant, or falls over the first time a network link blips — and won't be able to explain why in the incident review, because "consistency" was assumed rather than chosen. Every architecture pattern later in this guide — Lambda vs Kappa, warehouse vs lake, mesh vs monolith — is really just a specific, defensible answer to the trade-off this topic names. That's why it opens [Foundations: Bridging from Legacy DW & ETL](./): the whole point of this group is to hand you the vocabulary that makes the rest of the guide precise instead of a matter of taste, and this is the most load-bearing piece of that vocabulary.
+An architect who can't state precisely what a system gives up under load will eventually approve a design that loses a transaction, shows two customers two different balances at the same instant, or falls over the first time a network link blips — and won't be able to explain why in the incident review, because "consistency" was assumed rather than chosen. Every architecture pattern later in this guide — Lambda vs Kappa, warehouse vs lake, mesh vs monolith — is really just a specific, defensible answer to the trade-off this topic names. That's why it opens [Foundations: Bridging from Legacy DW & ETL](../): the whole point of this group is to hand you the vocabulary that makes the rest of the guide precise instead of a matter of taste, and this is the most load-bearing piece of that vocabulary.
 
 ## ACID: the promise your warehouse already keeps
 
@@ -66,7 +66,7 @@ For a data architect, this shows up constantly: an OLTP system backing a checkou
 
 ---
 
-| [&larr; Previous: Foundations: Bridging from Legacy DW & ETL](./) | [Next: Data Architecture Tenets & Styles: Monolithic, Distributed, Cloud &rarr;](02-tenets-and-styles/) |
+| [&larr; Previous: Foundations: Bridging from Legacy DW & ETL](../) | [Next: Data Architecture Tenets & Styles: Monolithic, Distributed, Cloud &rarr;](../02-tenets-and-styles/) |
 |:---|---:|
 
 <!-- prevnext:end -->

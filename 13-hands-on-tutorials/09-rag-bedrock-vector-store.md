@@ -15,7 +15,7 @@ nav_order: 9
 
 This tutorial builds a **RAG** pipeline where Bedrock Data Automation extracts text and structure from multimodal documents (PDFs, images), a Bedrock Knowledge Base chunks and embeds them into a vector store, and an LLM answers questions grounded in that retrieved context instead of its training data alone.
 
-It's the working implementation behind [Architecting for AI: Feature Stores, Vector Databases, RAG & Governance Guardrails](../12-architecting-for-ai-and-closing-the-loop/01-architecting-for-ai/) — the same embeddings-and-retrieval architecture, deployed rather than described.
+It's the working implementation behind [Architecting for AI: Feature Stores, Vector Databases, RAG & Governance Guardrails](../../12-architecting-for-ai-and-closing-the-loop/01-architecting-for-ai/) — the same embeddings-and-retrieval architecture, deployed rather than described.
 
 ```mermaid
 flowchart LR
@@ -31,7 +31,7 @@ flowchart LR
 
 ---
 
-| [&larr; Previous: Orchestrate an End-to-End ETL Pipeline with S3, Glue, Redshift Serverless & MWAA](08-orchestration-managed-airflow-mwaa/) | [Next: AWS Samples: Data Mesh Reference Architecture (DataZone, CDK & CloudFormation) &rarr;](10-aws-samples-data-mesh-reference/) |
+| [&larr; Previous: Orchestrate an End-to-End ETL Pipeline with S3, Glue, Redshift Serverless & MWAA](../08-orchestration-managed-airflow-mwaa/) | [Next: AWS Samples: Data Mesh Reference Architecture (DataZone, CDK & CloudFormation) &rarr;](../10-aws-samples-data-mesh-reference/) |
 |:---|---:|
 
 <!-- prevnext:end -->

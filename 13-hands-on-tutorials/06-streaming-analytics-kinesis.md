@@ -15,7 +15,7 @@ nav_order: 6
 
 This tutorial streams events through **Kinesis Data Streams** directly into **Redshift** using native streaming ingestion — no intermediate S3 landing zone or batch load step — and queries them within seconds of arrival.
 
-It's the concrete version of the latency call in [Should This Be Streaming At All? RT vs NRT Trade-offs & Exactly-Once Semantics](../06-ingestion-and-streaming-decisions/02-should-this-be-streaming-at-all/), and the Kinesis-to-warehouse path it uses is the same shape as the speed layer in [Kappa Architecture: Stream-Only Processing](../02-architecture-patterns-deep-dive/02-kappa-architecture/).
+It's the concrete version of the latency call in [Should This Be Streaming At All? RT vs NRT Trade-offs & Exactly-Once Semantics](../../06-ingestion-and-streaming-decisions/02-should-this-be-streaming-at-all/), and the Kinesis-to-warehouse path it uses is the same shape as the speed layer in [Kappa Architecture: Stream-Only Processing](../../02-architecture-patterns-deep-dive/02-kappa-architecture/).
 
 ```mermaid
 flowchart LR
@@ -29,7 +29,7 @@ flowchart LR
 
 ---
 
-| [&larr; Previous: Manage Data Transformations with dbt in Amazon Redshift](05-elt-dbt-redshift/) | [Next: Data Mesh at Scale with AWS Lake Formation Tag-Based Access Control &rarr;](07-data-mesh-lake-formation-glue/) |
+| [&larr; Previous: Manage Data Transformations with dbt in Amazon Redshift](../05-elt-dbt-redshift/) | [Next: Data Mesh at Scale with AWS Lake Formation Tag-Based Access Control &rarr;](../07-data-mesh-lake-formation-glue/) |
 |:---|---:|
 
 <!-- prevnext:end -->

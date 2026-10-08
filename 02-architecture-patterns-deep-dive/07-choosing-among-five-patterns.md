@@ -9,7 +9,7 @@ nav_order: 7
 
 *Part 2: The Architecture Landscape &middot; Architecture Patterns Deep Dive*
 
-Six named patterns in, an architect's real risk isn't forgetting what any single one of them is — it's reaching for the one that's currently fashionable instead of the one the requirements actually point to, and discovering the mismatch only after a team has spent a year building on it. [Data Fabric: Metadata-Driven Integration](06-data-fabric/) closed out the landscape with the newest and most vendor-driven of the six; this topic closes the group by putting Lambda, Kappa, Lakehouse, Medallion, Mesh, and Fabric side by side so a choice between them is a comparison against explicit criteria, not a guess at what's trending. None of these patterns is strictly better than another — each is a bet that a specific set of constraints (latency requirements, organizational size, team maturity, budget) will hold, and the job here is matching the bet to the constraints in front of you.
+Six named patterns in, an architect's real risk isn't forgetting what any single one of them is — it's reaching for the one that's currently fashionable instead of the one the requirements actually point to, and discovering the mismatch only after a team has spent a year building on it. [Data Fabric: Metadata-Driven Integration](../06-data-fabric/) closed out the landscape with the newest and most vendor-driven of the six; this topic closes the group by putting Lambda, Kappa, Lakehouse, Medallion, Mesh, and Fabric side by side so a choice between them is a comparison against explicit criteria, not a guess at what's trending. None of these patterns is strictly better than another — each is a bet that a specific set of constraints (latency requirements, organizational size, team maturity, budget) will hold, and the job here is matching the bet to the constraints in front of you.
 
 ## What question each pattern actually answers
 
@@ -61,7 +61,7 @@ At a high level, the components an architecture assembles from across all six pa
 
 ---
 
-| [&larr; Previous: Data Fabric: Metadata-Driven Integration](06-data-fabric/) | [Next: The Architect's Decision Framework &rarr;](../03-architects-decision-framework/) |
+| [&larr; Previous: Data Fabric: Metadata-Driven Integration](../06-data-fabric/) | [Next: The Architect's Decision Framework &rarr;](../../03-architects-decision-framework/) |
 |:---|---:|
 
 <!-- prevnext:end -->

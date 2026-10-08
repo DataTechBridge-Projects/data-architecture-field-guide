@@ -15,7 +15,7 @@ nav_order: 10
 
 This is a deployable reference repo, not a blog walkthrough: clone it and CDK/CloudFormation stand up a multi-account **data mesh**, with DataZone as the central catalog and subscription workflow connecting producer and consumer domains.
 
-It's the full-stack, infrastructure-as-code companion to [Data Mesh: Decentralized Domain Ownership](../02-architecture-patterns-deep-dive/05-data-mesh/) — worth deploying once to see domain ownership, a central catalog, and self-serve subscription enforced as actual AWS resources rather than a diagram.
+It's the full-stack, infrastructure-as-code companion to [Data Mesh: Decentralized Domain Ownership](../../02-architecture-patterns-deep-dive/05-data-mesh/) — worth deploying once to see domain ownership, a central catalog, and self-serve subscription enforced as actual AWS resources rather than a diagram.
 
 ```mermaid
 flowchart LR
@@ -37,7 +37,7 @@ flowchart LR
 
 ---
 
-| [&larr; Previous: Multimodal RAG with Amazon Bedrock Data Automation & Knowledge Bases](09-rag-bedrock-vector-store/) |  |
+| [&larr; Previous: Multimodal RAG with Amazon Bedrock Data Automation & Knowledge Bases](../09-rag-bedrock-vector-store/) |  |
 |:---|---:|
 
 <!-- prevnext:end -->

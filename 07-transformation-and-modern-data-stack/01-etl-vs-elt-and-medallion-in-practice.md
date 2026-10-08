@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 4: Moving & Shaping Data &middot; Transformation & the Modern Data Stack*
 
-Pick the wrong place to run your transformation logic and you either bottleneck every load on a single ETL server or hand your warehouse a compute bill it didn't need to pay — this topic is what lets you place the **T** deliberately instead of by habit. The [previous topic](../06-ingestion-and-streaming-decisions/02-should-this-be-streaming-at-all/) settled how data *arrives* — batch, NRT, or true RT; this one picks up right after landing and asks what happens to that data once it's sitting in your platform, before anyone can query it with confidence.
+Pick the wrong place to run your transformation logic and you either bottleneck every load on a single ETL server or hand your warehouse a compute bill it didn't need to pay — this topic is what lets you place the **T** deliberately instead of by habit. The [previous topic](../../06-ingestion-and-streaming-decisions/02-should-this-be-streaming-at-all/) settled how data *arrives* — batch, NRT, or true RT; this one picks up right after landing and asks what happens to that data once it's sitting in your platform, before anyone can query it with confidence.
 
 ## ETL vs ELT: why the T moved
 
@@ -21,7 +21,7 @@ That doesn't make ETL obsolete. A regulated field that must be masked or dropped
 
 ## The medallion pattern: bronze, silver, gold
 
-ELT's raw-first approach only works if "raw in the warehouse" doesn't mean "raw in front of business users." The **medallion** pattern — introduced architecturally in [Medallion Architecture: Bronze/Silver/Gold](../02-architecture-patterns-deep-dive/04-medallion-architecture/) — is the layering discipline that makes ELT safe: three progressively refined zones inside the same platform, not three separate systems. Here the focus is narrower and more operational: how ETL/ELT placement decisions actually play out layer by layer, day to day.
+ELT's raw-first approach only works if "raw in the warehouse" doesn't mean "raw in front of business users." The **medallion** pattern — introduced architecturally in [Medallion Architecture: Bronze/Silver/Gold](../../02-architecture-patterns-deep-dive/04-medallion-architecture/) — is the layering discipline that makes ELT safe: three progressively refined zones inside the same platform, not three separate systems. Here the focus is narrower and more operational: how ETL/ELT placement decisions actually play out layer by layer, day to day.
 
 - **Bronze** — the raw landing zone. Data arrives close to source format, append-only, unaltered even if it's messy or duplicated. This is your audit trail and your replay source if anything downstream breaks.
 - **Silver** — cleaned and conformed. Deduplication, type casting, key standardization, and joins that make bronze usable, but still close to the grain of the source systems rather than shaped for one specific report.
@@ -57,7 +57,7 @@ You now have a placement decision (ETL vs ELT) and an organizing pattern for the
 
 ---
 
-| [&larr; Previous: Transformation & the Modern Data Stack](./) | [Next: The dbt Paradigm: Transformation as Code, Data Contracts & Idempotent Reprocessing &rarr;](02-dbt-paradigm-contracts-idempotency/) |
+| [&larr; Previous: Transformation & the Modern Data Stack](../) | [Next: The dbt Paradigm: Transformation as Code, Data Contracts & Idempotent Reprocessing &rarr;](../02-dbt-paradigm-contracts-idempotency/) |
 |:---|---:|
 
 <!-- prevnext:end -->

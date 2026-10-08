@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 5: Running It Like a Platform &middot; Cost & Performance Architecture*
 
-An architect who tunes a platform for "speed" in the abstract will optimize the wrong thing for most of the people using it — indexing for the dashboard that runs in two seconds anyway while the nightly load that actually blocks the business quietly doubles in duration. [Cost as an Architectural Decision](01-cost-as-architectural-decision/) established that every storage and compute choice carries a price; performance tuning is the other half of that same coin, because most of the levers that make a workload faster are the identical levers that make it cheaper to run. Getting this wrong doesn't just cost money — it means shipping a platform that feels fast in the demo and falls over the first week production traffic hits it unevenly across workload types.
+An architect who tunes a platform for "speed" in the abstract will optimize the wrong thing for most of the people using it — indexing for the dashboard that runs in two seconds anyway while the nightly load that actually blocks the business quietly doubles in duration. [Cost as an Architectural Decision](../01-cost-as-architectural-decision/) established that every storage and compute choice carries a price; performance tuning is the other half of that same coin, because most of the levers that make a workload faster are the identical levers that make it cheaper to run. Getting this wrong doesn't just cost money — it means shipping a platform that feels fast in the demo and falls over the first week production traffic hits it unevenly across workload types.
 
 ## There Is No "Fast" — Only Fast for a Workload
 
@@ -66,7 +66,7 @@ None of these levers require guessing. Query engines expose scan statistics, cac
 
 ---
 
-| [&larr; Previous: Cost as an Architectural Decision: Storage, Compute & Egress Economics](01-cost-as-architectural-decision/) | [Next: Serving, Reliability & the Mesh Operating Model &rarr;](../11-serving-reliability-and-mesh-operating-model/) |
+| [&larr; Previous: Cost as an Architectural Decision: Storage, Compute & Egress Economics](../01-cost-as-architectural-decision/) | [Next: Serving, Reliability & the Mesh Operating Model &rarr;](../../11-serving-reliability-and-mesh-operating-model/) |
 |:---|---:|
 
 <!-- prevnext:end -->

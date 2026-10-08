@@ -15,7 +15,7 @@ nav_order: 8
 
 This tutorial chains an S3-to-Glue-to-Redshift-Serverless pipeline into a single **Airflow** DAG running on **MWAA**, with task dependencies, retries, and scheduling instead of a cron job calling scripts in sequence.
 
-It's the managed-orchestration version of [DataOps & Platform Engineering: CI/CD, IaC/GitOps & Orchestration Patterns](../08-dataops-orchestration-and-metadata/01-dataops-cicd-iac-orchestration/) — the same DAG-and-dependency-management argument that topic makes, expressed as an actual Airflow DAG file.
+It's the managed-orchestration version of [DataOps & Platform Engineering: CI/CD, IaC/GitOps & Orchestration Patterns](../../08-dataops-orchestration-and-metadata/01-dataops-cicd-iac-orchestration/) — the same DAG-and-dependency-management argument that topic makes, expressed as an actual Airflow DAG file.
 
 ```mermaid
 flowchart LR
@@ -31,7 +31,7 @@ flowchart LR
 
 ---
 
-| [&larr; Previous: Data Mesh at Scale with AWS Lake Formation Tag-Based Access Control](07-data-mesh-lake-formation-glue/) | [Next: Multimodal RAG with Amazon Bedrock Data Automation & Knowledge Bases &rarr;](09-rag-bedrock-vector-store/) |
+| [&larr; Previous: Data Mesh at Scale with AWS Lake Formation Tag-Based Access Control](../07-data-mesh-lake-formation-glue/) | [Next: Multimodal RAG with Amazon Bedrock Data Automation & Knowledge Bases &rarr;](../09-rag-bedrock-vector-store/) |
 |:---|---:|
 
 <!-- prevnext:end -->

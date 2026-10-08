@@ -9,7 +9,7 @@ nav_order: 5
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-If you've spent years building jobs in Talend or Informatica PowerCenter, you already understand data pipelines — what you need now is the vocabulary for why the *shape* of that pipeline has shifted under the industry's feet, so you can explain to a skeptical stakeholder why "just add another transformation stage to the existing ETL tool" isn't always still the right move. [Data Modeling, Database Types & Normalization Refresher](04-data-modeling-refresher/) covered how data is shaped once it lands; this topic covers how it gets there in the first place.
+If you've spent years building jobs in Talend or Informatica PowerCenter, you already understand data pipelines — what you need now is the vocabulary for why the *shape* of that pipeline has shifted under the industry's feet, so you can explain to a skeptical stakeholder why "just add another transformation stage to the existing ETL tool" isn't always still the right move. [Data Modeling, Database Types & Normalization Refresher](../04-data-modeling-refresher/) covered how data is shaped once it lands; this topic covers how it gets there in the first place.
 
 ## What a data pipeline does
 
@@ -21,7 +21,7 @@ A **data pipeline** ingests data from sources — operational databases, APIs, s
 
 **ELT (Extract, Load, Transform)** flips the last two steps: raw data is extracted and loaded into the target system first, largely as-is, and transformation happens *inside* that target system afterward, using its own compute. This became the dominant pattern once cloud object storage made holding raw data cheap and columnar cloud warehouses (Redshift, Snowflake, BigQuery) became powerful enough to do heavy transformation themselves — usually in SQL, often via tools like dbt (covered later in this guide). The medallion pattern you'll meet in the next group — bronze (raw) to silver (cleaned) to gold (business-ready) — is ELT's transformation stages made explicit as layers inside the warehouse or lake itself.
 
-The economics behind that shift are concrete, not just architectural fashion. Transforming a day's clickstream data on a dedicated on-premises ETL server was often the only option when warehouse compute was licensed per-core and treated as scarce; the same transformation running as SQL inside a cloud warehouse or a Spark cluster scales elastically and gets billed by the second, then disappears again once the job finishes. That's what "compute where the data already lives" means in dollar terms, and it's why a warehouse developer moving into an architect role should think of ELT less as a new tool category and more as a direct consequence of storage and compute finally being cheap and separately scalable — the same decoupling that underlies the [lakehouse pattern](../02-architecture-patterns-deep-dive/03-lakehouse-architecture/) covered later in this guide.
+The economics behind that shift are concrete, not just architectural fashion. Transforming a day's clickstream data on a dedicated on-premises ETL server was often the only option when warehouse compute was licensed per-core and treated as scarce; the same transformation running as SQL inside a cloud warehouse or a Spark cluster scales elastically and gets billed by the second, then disappears again once the job finishes. That's what "compute where the data already lives" means in dollar terms, and it's why a warehouse developer moving into an architect role should think of ELT less as a new tool category and more as a direct consequence of storage and compute finally being cheap and separately scalable — the same decoupling that underlies the [lakehouse pattern](../../02-architecture-patterns-deep-dive/03-lakehouse-architecture/) covered later in this guide.
 
 ```mermaid
 flowchart LR
@@ -48,7 +48,7 @@ The tool landscape reflects this shift rather than replacing it outright. On-pre
 
 Whichever pattern you choose, the same disciplines still apply: validate data quality as early as possible, design for idempotent reprocessing (rerunning a pipeline shouldn't duplicate or corrupt data), monitor for pipeline failures and data drift, and keep the pipeline scalable enough to absorb source-volume growth without a rebuild — every one of which resurfaces in depth later in this guide.
 
-Idempotency is worth pausing on, because ELT doesn't grant it for free. A pipeline that re-runs after a network timeout and blindly re-inserts every row it already loaded is a classic legacy-ETL failure mode, and ELT doesn't automatically fix it: if the transform logic in the silver layer isn't written to upsert on a natural or surrogate key, a rerun after a partial failure just doubles the affected day's rows silently, and the first sign of trouble is a dashboard total that's inexplicably too high. The [dbt Paradigm](../07-transformation-and-modern-data-stack/02-dbt-paradigm-contracts-idempotency/) topic later in this guide covers exactly how to write transforms that survive a rerun.
+Idempotency is worth pausing on, because ELT doesn't grant it for free. A pipeline that re-runs after a network timeout and blindly re-inserts every row it already loaded is a classic legacy-ETL failure mode, and ELT doesn't automatically fix it: if the transform logic in the silver layer isn't written to upsert on a natural or surrogate key, a rerun after a partial failure just doubles the affected day's rows silently, and the first sign of trouble is a dashboard total that's inexplicably too high. The [dbt Paradigm](../../07-transformation-and-modern-data-stack/02-dbt-paradigm-contracts-idempotency/) topic later in this guide covers exactly how to write transforms that survive a rerun.
 
 {: .important }
 > Moving from ETL to ELT does not mean moving from *governed* to *ungoverned*. Landing raw data first is a legitimate architectural choice, not a license to skip validation — the checks a legacy ETL job ran before load still have to happen somewhere; ELT just moves them downstream (typically into the silver layer) instead of removing them.
@@ -59,7 +59,7 @@ The pattern you choose here — and how much of the transformation burden you pu
 
 ---
 
-| [&larr; Previous: Data Modeling, Database Types & Normalization Refresher](04-data-modeling-refresher/) | [Next: Batch, Near-Real-Time & Real-Time Processing: Building Robust Pipelines &rarr;](06-batch-realtime-and-robust-pipelines/) |
+| [&larr; Previous: Data Modeling, Database Types & Normalization Refresher](../04-data-modeling-refresher/) | [Next: Batch, Near-Real-Time & Real-Time Processing: Building Robust Pipelines &rarr;](../06-batch-realtime-and-robust-pipelines/) |
 |:---|---:|
 
 <!-- prevnext:end -->

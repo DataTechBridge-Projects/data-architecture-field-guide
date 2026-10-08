@@ -9,7 +9,7 @@ nav_order: 6
 
 *Part 2: The Architecture Landscape &middot; Architecture Patterns Deep Dive*
 
-[Data Mesh: Decentralized Domain Ownership](05-data-mesh/) solves the ownership bottleneck by pushing data products out to domain teams — but it leaves an architect with a new problem: how does anyone, or anything, actually discover and connect to dozens of independently-owned data products scattered across clouds, warehouses, and lakehouses without hand-rolling integration for every pair of systems? Wiring that by hand doesn't scale past a handful of domains, and it's the reason large enterprises with genuinely heterogeneous estates — an on-prem mainframe here, an AWS lakehouse there, a SaaS CRM's API somewhere else — often reach for Data Fabric instead of, or alongside, mesh. Where mesh is primarily an organizational answer (who owns the data), fabric is primarily a technical one (how systems find and connect to each other) built around one idea: let **metadata** do the integration work that used to require custom point-to-point pipelines.
+[Data Mesh: Decentralized Domain Ownership](../05-data-mesh/) solves the ownership bottleneck by pushing data products out to domain teams — but it leaves an architect with a new problem: how does anyone, or anything, actually discover and connect to dozens of independently-owned data products scattered across clouds, warehouses, and lakehouses without hand-rolling integration for every pair of systems? Wiring that by hand doesn't scale past a handful of domains, and it's the reason large enterprises with genuinely heterogeneous estates — an on-prem mainframe here, an AWS lakehouse there, a SaaS CRM's API somewhere else — often reach for Data Fabric instead of, or alongside, mesh. Where mesh is primarily an organizational answer (who owns the data), fabric is primarily a technical one (how systems find and connect to each other) built around one idea: let **metadata** do the integration work that used to require custom point-to-point pipelines.
 
 ## Active metadata as the connective tissue
 
@@ -61,7 +61,7 @@ Fabric earns its cost in large, genuinely heterogeneous enterprises — multiple
 
 ---
 
-| [&larr; Previous: Data Mesh: Decentralized Domain Ownership](05-data-mesh/) | [Next: Choosing Among the Patterns: Comparison & Decision Guide &rarr;](07-choosing-among-five-patterns/) |
+| [&larr; Previous: Data Mesh: Decentralized Domain Ownership](../05-data-mesh/) | [Next: Choosing Among the Patterns: Comparison & Decision Guide &rarr;](../07-choosing-among-five-patterns/) |
 |:---|---:|
 
 <!-- prevnext:end -->

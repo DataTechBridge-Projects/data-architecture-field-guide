@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 3: Designing the Data Layer &middot; Dimensional Modeling for the Cloud Era*
 
-Picking **Inmon**, **Kimball**, or **Data Vault** as your warehouse's design philosophy isn't a stylistic preference you can defer — it decides whether onboarding a new subject area takes your team a sprint or a quarter, and whether an auditor can trace a number back to its source system five years from now. Get it wrong and you don't find out until the mismatch is expensive to unwind: a Kimball shop bolting on audit trails after the regulator asks, or an Inmon shop watching BI requests queue up behind a normalization layer nobody outside the data team can query. [Table Formats: Delta vs Iceberg vs Hudi](../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/) settled the *where* — which open table format sits under your data and how it gets ACID guarantees on object storage. This topic is the *how it's shaped* question sitting directly on top of that choice: the same Iceberg or Delta table can hold a normalized Inmon-style entity, a Kimball **fact** table, or a Data Vault satellite, and the table format itself has no opinion on which one you pick.
+Picking **Inmon**, **Kimball**, or **Data Vault** as your warehouse's design philosophy isn't a stylistic preference you can defer — it decides whether onboarding a new subject area takes your team a sprint or a quarter, and whether an auditor can trace a number back to its source system five years from now. Get it wrong and you don't find out until the mismatch is expensive to unwind: a Kimball shop bolting on audit trails after the regulator asks, or an Inmon shop watching BI requests queue up behind a normalization layer nobody outside the data team can query. [Table Formats: Delta vs Iceberg vs Hudi](../../04-storage-and-table-formats/02-table-formats-delta-iceberg-hudi/) settled the *where* — which open table format sits under your data and how it gets ACID guarantees on object storage. This topic is the *how it's shaped* question sitting directly on top of that choice: the same Iceberg or Delta table can hold a normalized Inmon-style entity, a Kimball **fact** table, or a Data Vault satellite, and the table format itself has no opinion on which one you pick.
 
 ## The question each school actually answers
 
@@ -50,7 +50,7 @@ The next topic assumes you've landed on some flavor of dimensional mart — whet
 
 ---
 
-| [&larr; Previous: Dimensional Modeling for the Cloud Era](./) | [Next: Facts, Dimensions & Grain: The Foundation of Dimensional Modeling &rarr;](02-facts-dimensions-grain/) |
+| [&larr; Previous: Dimensional Modeling for the Cloud Era](../) | [Next: Facts, Dimensions & Grain: The Foundation of Dimensional Modeling &rarr;](../02-facts-dimensions-grain/) |
 |:---|---:|
 
 <!-- prevnext:end -->

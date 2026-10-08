@@ -9,7 +9,7 @@ nav_order: 1
 
 *Part 4: Moving & Shaping Data &middot; Ingestion & Streaming Decisions*
 
-An architect who defaults to "just re-copy the whole table every night" eventually meets a source system that can't survive a full extract on a hot path, and one who defaults to "stream everything with CDC" eventually meets a team that has no idea how to operate a log-based pipeline at 3 a.m. Knowing which ingestion pattern a given source and consumer actually calls for is what keeps you out of both traps — and it's a decision you make once per source, not once per course. The [previous topic on One Big Table and wide tables](../05-dimensional-modeling-cloud-era/04-beyond-star-schemas/) settled what the data should look like once it lands; this topic is about how it gets there, and the two decisions compound — a wide gold table assembled by squashing joins upstream needs a very different ingestion cadence than a narrow fact table fed row-by-row. The instinct itself should feel familiar from [legacy ETL and its modern ELT descendant](../01-foundations/05-legacy-etl-to-modern-elt/): choosing a load strategy for a Talend or Informatica job was the same decision, just with fewer options on the table than a cloud-native pipeline now offers.
+An architect who defaults to "just re-copy the whole table every night" eventually meets a source system that can't survive a full extract on a hot path, and one who defaults to "stream everything with CDC" eventually meets a team that has no idea how to operate a log-based pipeline at 3 a.m. Knowing which ingestion pattern a given source and consumer actually calls for is what keeps you out of both traps — and it's a decision you make once per source, not once per course. The [previous topic on One Big Table and wide tables](../../05-dimensional-modeling-cloud-era/04-beyond-star-schemas/) settled what the data should look like once it lands; this topic is about how it gets there, and the two decisions compound — a wide gold table assembled by squashing joins upstream needs a very different ingestion cadence than a narrow fact table fed row-by-row. The instinct itself should feel familiar from [legacy ETL and its modern ELT descendant](../../01-foundations/05-legacy-etl-to-modern-elt/): choosing a load strategy for a Talend or Informatica job was the same decision, just with fewer options on the table than a cloud-native pipeline now offers.
 
 ## The Ingestion Decision Tree
 
@@ -91,7 +91,7 @@ No single row in the manifest says "this is the retailer's ingestion architectur
 
 ---
 
-| [&larr; Previous: Ingestion & Streaming Decisions](./) | [Next: Should This Be Streaming At All? RT vs NRT Trade-offs & Exactly-Once Semantics &rarr;](02-should-this-be-streaming-at-all/) |
+| [&larr; Previous: Ingestion & Streaming Decisions](../) | [Next: Should This Be Streaming At All? RT vs NRT Trade-offs & Exactly-Once Semantics &rarr;](../02-should-this-be-streaming-at-all/) |
 |:---|---:|
 
 <!-- prevnext:end -->

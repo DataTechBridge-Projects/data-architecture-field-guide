@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 2: The Architecture Landscape &middot; Architecture Patterns Deep Dive*
 
-Once an architect has felt the pain of keeping a batch codebase and a streaming codebase logically equivalent, the natural next question is whether the batch layer is pulling its weight at all — and for pipelines where the source data can be fully replayed on demand, the honest answer is often no. Building on [Lambda Architecture: Batch + Speed Layers](01-lambda-architecture/), Kappa Architecture answers that question directly: keep only the speed layer, and treat every workload — live and historical alike — as a query against a single stream-processing pipeline.
+Once an architect has felt the pain of keeping a batch codebase and a streaming codebase logically equivalent, the natural next question is whether the batch layer is pulling its weight at all — and for pipelines where the source data can be fully replayed on demand, the honest answer is often no. Building on [Lambda Architecture: Batch + Speed Layers](../01-lambda-architecture/), Kappa Architecture answers that question directly: keep only the speed layer, and treat every workload — live and historical alike — as a query against a single stream-processing pipeline.
 
 ## Log, processor, sink
 
@@ -63,7 +63,7 @@ Kappa is the right call when the source data is genuinely event-shaped and repla
 
 ---
 
-| [&larr; Previous: Lambda Architecture: Batch + Speed Layers](01-lambda-architecture/) | [Next: Lakehouse Architecture: Unifying Warehouse & Lake &rarr;](03-lakehouse-architecture/) |
+| [&larr; Previous: Lambda Architecture: Batch + Speed Layers](../01-lambda-architecture/) | [Next: Lakehouse Architecture: Unifying Warehouse & Lake &rarr;](../03-lakehouse-architecture/) |
 |:---|---:|
 
 <!-- prevnext:end -->

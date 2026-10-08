@@ -9,14 +9,14 @@ nav_order: 2
 
 *Part 4: Moving & Shaping Data &middot; Ingestion & Streaming Decisions*
 
-A stakeholder who asks for "real-time reporting" is making an architecture decision without knowing it — and an architect who builds continuous streaming infrastructure for a dashboard that only ever needed a five-minute refresh has spent months of engineering effort, plus an ongoing on-call burden, on a requirement nobody actually had. The [previous topic's ingestion decision tree](01-ingestion-decisions-batch-incremental-cdc/) sorted sources into batch, incremental, or CDC based on how the data gets *captured*; this topic asks a question that sits above all three — once change is being captured, does it need to keep *moving* continuously, or is periodic movement enough to satisfy whoever's waiting on it?
+A stakeholder who asks for "real-time reporting" is making an architecture decision without knowing it — and an architect who builds continuous streaming infrastructure for a dashboard that only ever needed a five-minute refresh has spent months of engineering effort, plus an ongoing on-call burden, on a requirement nobody actually had. The [previous topic's ingestion decision tree](../01-ingestion-decisions-batch-incremental-cdc/) sorted sources into batch, incremental, or CDC based on how the data gets *captured*; this topic asks a question that sits above all three — once change is being captured, does it need to keep *moving* continuously, or is periodic movement enough to satisfy whoever's waiting on it?
 
 ## The Real-Time Illusion: Latency Is a Business Decision
 
 The word "real-time" gets used loosely enough that two people in the same meeting can mean latencies three orders of magnitude apart. This course uses the two terms precisely, and so should you:
 
 - **RT (real-time)**: continuous, event-at-a-time processing with sub-second-to-low-single-digit-second end-to-end latency — true streaming, where each event is processed as it arrives rather than waiting for company.
-- **NRT (near-real-time)**: micro-batched processing with latency in the seconds-to-minutes range. This is what most systems a stakeholder calls "real-time" actually are, as the [batch, NRT, and RT spectrum topic](../01-foundations/06-batch-realtime-and-robust-pipelines/) laid out.
+- **NRT (near-real-time)**: micro-batched processing with latency in the seconds-to-minutes range. This is what most systems a stakeholder calls "real-time" actually are, as the [batch, NRT, and RT spectrum topic](../../01-foundations/06-batch-realtime-and-robust-pipelines/) laid out.
 
 The question that actually matters is not "how fast can we make this?" but "what decision gets made from this data, and what does it cost the business if that decision is made two minutes later instead of two hundred milliseconds later?" A fraud-scoring model blocking a card swipe or a bidding engine responding to an ad auction has a real answer: those decisions expire in milliseconds, which is genuine RT territory. An inventory dashboard, a churn score, or a daily active-user count almost never does — NRT, or even batch, meets the actual business need at a fraction of the cost.
 
@@ -71,13 +71,13 @@ Streaming — RT in particular — carries a standing cost that a batch or NRT p
 
 ## Lambda vs Kappa: Unifying Batch & Stream
 
-Once you do need streaming, the same exactly-once and complexity-tax trade-offs resurface at the architecture level. [Lambda architecture](../02-architecture-patterns-deep-dive/01-lambda-architecture/) keeps a batch layer and a speed layer side by side, accepting the operational cost of running two systems in exchange for the batch layer's easy correctness as a backstop to the speed layer's best-effort freshness. [Kappa architecture](../02-architecture-patterns-deep-dive/02-kappa-architecture/) collapses both into a single stream-processing path and handles reprocessing by replaying the log — simpler to operate as one system, but only workable once you trust your stream processor's exactly-once and replay guarantees enough to make it the sole source of truth. Which one an organization leans toward is usually a direct readout of how it answered the exactly-once question above.
+Once you do need streaming, the same exactly-once and complexity-tax trade-offs resurface at the architecture level. [Lambda architecture](../../02-architecture-patterns-deep-dive/01-lambda-architecture/) keeps a batch layer and a speed layer side by side, accepting the operational cost of running two systems in exchange for the batch layer's easy correctness as a backstop to the speed layer's best-effort freshness. [Kappa architecture](../../02-architecture-patterns-deep-dive/02-kappa-architecture/) collapses both into a single stream-processing path and handles reprocessing by replaying the log — simpler to operate as one system, but only workable once you trust your stream processor's exactly-once and replay guarantees enough to make it the sole source of truth. Which one an organization leans toward is usually a direct readout of how it answered the exactly-once question above.
 
 <!-- prevnext:start -->
 
 ---
 
-| [&larr; Previous: Ingestion Decisions: Batch, Incremental Loading & Change Data Capture](01-ingestion-decisions-batch-incremental-cdc/) | [Next: Transformation & the Modern Data Stack &rarr;](../07-transformation-and-modern-data-stack/) |
+| [&larr; Previous: Ingestion Decisions: Batch, Incremental Loading & Change Data Capture](../01-ingestion-decisions-batch-incremental-cdc/) | [Next: Transformation & the Modern Data Stack &rarr;](../../07-transformation-and-modern-data-stack/) |
 |:---|---:|
 
 <!-- prevnext:end -->

@@ -9,7 +9,7 @@ nav_order: 2
 
 *Part 1: Theory & Foundations &middot; Foundations: Bridging from Legacy DW & ETL*
 
-If you can't name the tenets a design has to satisfy, you can't tell a stakeholder why their favorite shortcut is a bad idea — you'll be reduced to "it feels risky" instead of "this violates our durability and governance requirements." [ACID, BASE & the CAP theorem](01-acid-base-and-cap-theorem/) gave you the physics of what a system can promise under distribution; this topic gives you the vocabulary for judging whether a *whole system's shape* — not just one database's consistency setting — is fit for purpose.
+If you can't name the tenets a design has to satisfy, you can't tell a stakeholder why their favorite shortcut is a bad idea — you'll be reduced to "it feels risky" instead of "this violates our durability and governance requirements." [ACID, BASE & the CAP theorem](../01-acid-base-and-cap-theorem/) gave you the physics of what a system can promise under distribution; this topic gives you the vocabulary for judging whether a *whole system's shape* — not just one database's consistency setting — is fit for purpose.
 
 ## What "data architecture" actually means
 
@@ -30,9 +30,9 @@ Regardless of the shape a data architecture takes, it's evaluated against the sa
 | **Accessibility & flexibility** | Legitimate consumers can reach the data they need, and the design can absorb new sources, formats, and consumers without a rebuild. |
 | **Maintainability** | The system can be operated, debugged, and evolved by people who didn't build it. |
 
-None of these is free, and they frequently pull against each other — stronger security adds friction that fights accessibility; higher scalability often costs more; strict governance can slow the flexibility a growing business demands. Part of an architect's job, covered directly in [The Architect's Decision Framework](../03-architects-decision-framework/) later in this guide, is making those trade-offs explicit and defensible rather than accidental.
+None of these is free, and they frequently pull against each other — stronger security adds friction that fights accessibility; higher scalability often costs more; strict governance can slow the flexibility a growing business demands. Part of an architect's job, covered directly in [The Architect's Decision Framework](../../03-architects-decision-framework/) later in this guide, is making those trade-offs explicit and defensible rather than accidental.
 
-That pull between tenets is easiest to see when two of them collide head-on. Take a retailer that just expanded into the EU: a customer invokes GDPR's right to be forgotten, which sounds like a straightforward **compliance** obligation — delete the record. But finance's seven-year audit retention requirement is a **governance** obligation pointing the other way, and the transactional facts in that customer's orders are still load-bearing for tax filings and fraud investigations that have nothing to do with the customer personally. Neither tenet loses outright; the usual resolution is to pseudonymize the customer-identifying columns on request while leaving the order facts themselves intact, so the erasure obligation and the retention obligation are both satisfied against different parts of the same row. That reconciliation — not picking a winner — is what "trade-offs explicit and defensible" means in practice, and it's a pattern you'll see again once [master data management](../09-quality-security-and-governance/02-master-data-management/) and golden records enter the picture later in this guide.
+That pull between tenets is easiest to see when two of them collide head-on. Take a retailer that just expanded into the EU: a customer invokes GDPR's right to be forgotten, which sounds like a straightforward **compliance** obligation — delete the record. But finance's seven-year audit retention requirement is a **governance** obligation pointing the other way, and the transactional facts in that customer's orders are still load-bearing for tax filings and fraud investigations that have nothing to do with the customer personally. Neither tenet loses outright; the usual resolution is to pseudonymize the customer-identifying columns on request while leaving the order facts themselves intact, so the erasure obligation and the retention obligation are both satisfied against different parts of the same row. That reconciliation — not picking a winner — is what "trade-offs explicit and defensible" means in practice, and it's a pattern you'll see again once [master data management](../../09-quality-security-and-governance/02-master-data-management/) and golden records enter the picture later in this guide.
 
 ## Three styles, three different bets
 
@@ -72,7 +72,7 @@ This same evaluation — tenets first, style second — is the pattern you'll re
 
 ---
 
-| [&larr; Previous: ACID, BASE & the CAP Theorem: The Physics Underneath Every Data System](01-acid-base-and-cap-theorem/) | [Next: OLTP vs OLAP: Transactional vs Analytical Workloads &rarr;](03-oltp-vs-olap/) |
+| [&larr; Previous: ACID, BASE & the CAP Theorem: The Physics Underneath Every Data System](../01-acid-base-and-cap-theorem/) | [Next: OLTP vs OLAP: Transactional vs Analytical Workloads &rarr;](../03-oltp-vs-olap/) |
 |:---|---:|
 
 <!-- prevnext:end -->
