@@ -67,6 +67,14 @@ Every access control adds friction: a data scientist waits days for a grant, a d
 {: .important }
 > Security's cost isn't only breach risk — it's the friction tax on every legitimate query. Push that tax too high and people build shadow pipelines and unmanaged spreadsheet exports to get their job done anyway, which is a *worse* security posture than the one you were trying to avoid. Size controls to actual sensitivity and blast radius, not uniformly to the strictest tier you can imagine.
 
+## Tools: catalogs, policy engines, and native platform controls
+
+Governance tooling splits into three layers, and most architectures end up running at least one tool from each rather than a single do-everything product. The **catalog and classification layer** is where PII gets tagged and lineage gets surfaced to humans: **Collibra** and **Alation** are the long-standing enterprise players, strong on business glossaries and stewardship workflows; **Atlan** is the newer, engineer-friendlier entrant built around the same active-metadata idea as the catalogs covered in [Metadata, Lineage & the Data Catalog](../08-dataops-orchestration-and-metadata/02-metadata-lineage-and-catalog/); and the cloud providers each ship their own — **Microsoft Purview** across Azure, **Google Cloud Dataplex**, **AWS Glue Data Catalog** paired with **Lake Formation**.
+
+The **policy-engine layer** is where ABAC and masking rules actually get evaluated at query time. **Open Policy Agent (OPA)** is the open-source, cloud-agnostic choice referenced in the policy-as-code example above; **Immuta** and **Privacera** are commercial platforms purpose-built for data (dynamic masking, attribute-based policies that span multiple warehouses and lakes from one control plane); **Apache Ranger** fills the same role natively in Hadoop-ecosystem and some lakehouse deployments. Increasingly, the third layer — **native platform controls** — covers a lot of this without a separate product at all: **Snowflake**'s row access policies and dynamic data masking, **Databricks Unity Catalog**'s attribute-based access control, and BigQuery's column-level security and policy tags all implement RBAC, ABAC, or RLS directly inside the engine the data already lives in.
+
+The practical decision is less "which vendor" than "how many engines do you actually have." A single-warehouse shop usually gets further with that platform's native controls than with a standalone policy engine — one less system to keep in sync. A data mesh spanning several warehouses, lakes, and engines is exactly the case a standalone catalog-plus-policy-engine pair earns its cost: without one, the same access rule has to be hand-replicated in every engine's own syntax, and federated governance's "non-negotiable global policies" stop being enforceable as a single, auditable source of truth.
+
 <!-- prevnext:start -->
 
 ---

@@ -15,6 +15,7 @@ mindmap
   root((Serving, Reliability & the Mesh Operating Model))
     The Serving Layer: BI, Semantic Layer, Reverse ETL & Data APIs
       Semantic layer as the single source of truth for metrics
+      Ontologies & knowledge graphs for cross-domain, machine-reasoned semantics
     Reliability: SLAs/SLOs, Observability, Multi-Region DR & Tenancy
       Error budgets as permission to take risk
     Data Products & the Data Mesh Operating Model
