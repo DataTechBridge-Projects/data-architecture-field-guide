@@ -84,7 +84,7 @@ A bank with EU subsidiaries and California retail customers doesn't get to pick 
 
 ---
 
-| [&larr; Previous: The Governance Operating Model: Owners, Stewards, Custodians & the Council](../05-governance-operating-model/) | [Next: Cost & Performance Architecture &rarr;](../../10-cost-and-performance-architecture/) |
+| [&larr; Previous: The Governance Operating Model: Owners, Stewards, Custodians & the Council](../05-governance-operating-model/) | [Next: Test Data Management: Masking, Tokenization, Subsetting & Synthetic Data for Lower Environments &rarr;](../07-test-data-management/) |
 |:---|---:|
 
 <!-- prevnext:end -->

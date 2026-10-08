@@ -123,7 +123,7 @@ flowchart TD
 | 6 | 4 | [Ingestion & Streaming Decisions](06-ingestion-and-streaming-decisions/) | 2 |
 | 7 | 4 | [Transformation & the Modern Data Stack](07-transformation-and-modern-data-stack/) | 2 |
 | 8 | 5 | [DataOps, Orchestration & Metadata](08-dataops-orchestration-and-metadata/) | 2 |
-| 9 | 5 | [Quality, Security & Governance](09-quality-security-and-governance/) | 3 |
+| 9 | 5 | [Quality, Security & Governance](09-quality-security-and-governance/) | 7 |
 | 10 | 5 | [Cost & Performance Architecture](10-cost-and-performance-architecture/) | 2 |
 | 11 | 6 | [Serving, Reliability & the Mesh Operating Model](11-serving-reliability-and-mesh-operating-model/) | 3 |
 | 12 | 7 | [Architecting for AI & Closing the Loop](12-architecting-for-ai-and-closing-the-loop/) | 3 |
