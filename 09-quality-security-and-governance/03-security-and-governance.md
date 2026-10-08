@@ -79,7 +79,7 @@ The practical decision is less "which vendor" than "how many engines do you actu
 
 ---
 
-| [&larr; Previous: Master Data Management: Golden Records, Matching & Stewardship](02-master-data-management/) | [Next: Cost & Performance Architecture &rarr;](../10-cost-and-performance-architecture/) |
+| [&larr; Previous: Master Data Management: Golden Records, Matching & Stewardship](02-master-data-management/) | [Next: Data Strategy & Roadmaps: Maturity Assessment, Gap Analysis & Business Alignment &rarr;](04-data-strategy-and-roadmaps/) |
 |:---|---:|
 
 <!-- prevnext:end -->

@@ -28,7 +28,7 @@ mindmap
 
 ---
 
-| [&larr; Previous: Security & Governance: Access Control, Federated Governance & Compliance by Design](../09-quality-security-and-governance/03-security-and-governance/) | [Next: Cost as an Architectural Decision: Storage, Compute & Egress Economics &rarr;](01-cost-as-architectural-decision/) |
+| [&larr; Previous: Privacy & Industry Regulation: GDPR, CCPA, HIPAA & BFSI Compliance (Basel, PCI DSS, AML/KYC, SOX)](../09-quality-security-and-governance/06-privacy-and-industry-regulation/) | [Next: Cost as an Architectural Decision: Storage, Compute & Egress Economics &rarr;](01-cost-as-architectural-decision/) |
 |:---|---:|
 
 <!-- prevnext:end -->
