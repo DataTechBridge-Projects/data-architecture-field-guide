@@ -45,6 +45,10 @@ The cost of that flexibility is real and shows up in four places an architect ha
 
 None of this makes hybrid or multi-cloud wrong — a regulated bank with data-residency requirements, or an enterprise that acquired a company running on the other major cloud, often has no better option — but it does mean an architect should treat "just run it on both" as a deliberate, costed trade-off, following the same build-vs-buy-vs-compose reasoning this course develops further once the decision framework is introduced. Knowing both vendors' service maps, and the tax that crossing between them adds, is what turns a cloud migration or a multi-region design from a guess into an estimate.
 
+## A layer that predates the data platform: MuleSoft and iPaaS
+
+Long before a data architect ever touches a warehouse, most enterprises already run an application-integration layer connecting SaaS apps, ERPs, and legacy systems to each other in real time, independent of any analytics need. **MuleSoft (Anypoint Platform)** is the best-known example of an **iPaaS (integration platform as a service)**, alongside Boomi and Workato; architecturally it's closer to an **ESB (enterprise service bus)** than to Glue or ADF — its job is moving a single record between two applications the moment something changes (a new Salesforce lead triggers a write to an ERP), not transforming bulk data into warehouse-ready tables. An architect inherits two practical consequences from whatever iPaaS the org already runs: first, it's frequently a source worth ingesting from directly, since the cleanest, already-integrated version of a record may be flowing through it rather than sitting in the system of record itself; second, an iPaaS and a data platform can quietly duplicate each other's job if nobody draws the line — [reverse ETL](../../11-serving-reliability-and-mesh-operating-model/01-serving-layer-bi-semantic-reverse-etl-apis/) solves a similar "sync a value back into a SaaS app" problem from the data-platform side, and the two are easy to leave overlapping unless an architect explicitly decides which system owns which integration.
+
 <!-- prevnext:start -->
 
 ---
